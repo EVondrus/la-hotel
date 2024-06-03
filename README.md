@@ -39,17 +39,35 @@ TODO
 [Back to the top](#)
 
 ---
+
 ## Design
 
 ### Color Scheme
+
 TBC
 
-* The main colors used in this site are Dark Slater Blue, Gold/Beige and Cloudy White.
-* These main colors are the colors in the hotels's logo, and they permeate through the site.
-* These colors were each selected to embody the serene elegance and natural beauty of a Scandinavia, reflecting the tranquil ambiance and sophisticated charm of the setting.
-* A dark green has been used for the sucess messages, to signify that this is a successive action.
-* A dark red has been used for all Delete buttons, to signify that this is a destructive action.
-* The darker yellow has been used for the hover state of the call-to-action buttons.
-*  ?! Different color shades have also been used on the hover state of the social media icons on the Contact page to match the icons.
+- The main colors used in this site are Dark Slater Blue, Gold/Beige and Cloudy White.
 
-  ![Color scheme]() 
+* These main colors are the colors in the hotels's logo, and they permeate through the site.
+
+- These colors were each selected to embody the serene elegance and natural beauty of a Scandinavia, reflecting the tranquil ambiance and sophisticated charm of the setting.
+- A dark green has been used for the sucess messages, to signify that this is a successive action.
+- A dark red has been used for all Delete buttons, to signify that this is a destructive action.
+- The darker yellow has been used for the hover state of the call-to-action buttons.
+- ?! Different color shades have also been used on the hover state of the social media icons on the Contact page to match the icons.
+
+![Color scheme]()
+
+### Typography
+
+TBC
+
+- For the fonts, I selected Roboto Slab for headings and Open Sans for body text, both available through Google Fonts.
+- These choices were made with a keen focus on readability and accessibility, ensuring a welcoming experience for users with dyslexia and partial visual impairments.
+- The elegance and readability of these fonts contribute to the app's overall sophistication and ease of use.
+- By utilizing the standard HTML font size of 16px, ensuring to not have any fonts smaller than that, to aid visually impaired users.
+- Also, the recommended smallest font size for accessible websites is 12px, so by keeping all font sizes at the HTML standard of  (?! 16px) or above, I ensured to be fully compliant with the [Penn State University Accessibility and Usability Guidelines](https://accessibility.psu.edu/fontsizehtml/).
+- Font sizes are also able to be zoomed to 200% without losing contrast or functionality, to comply with the [WCAG Guidelines on fonts](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html).
+- Lastly, to prevent the app from appearing overly assertive, I incorporated a mix of uppercase and lowercase text strategically.
+
+![An example of the font used]()
