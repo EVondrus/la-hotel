@@ -39,3 +39,17 @@ TODO
 [Back to the top](#)
 
 ---
+## Design
+
+### Color Scheme
+TBC
+
+* The main colors used in this site are Dark Slater Blue, Gold/Beige and Cloudy White.
+* These main colors are the colors in the hotels's logo, and they permeate through the site.
+* These colors were each selected to embody the serene elegance and natural beauty of a Scandinavia, reflecting the tranquil ambiance and sophisticated charm of the setting.
+* A dark green has been used for the sucess messages, to signify that this is a successive action.
+* A dark red has been used for all Delete buttons, to signify that this is a destructive action.
+* The darker yellow has been used for the hover state of the call-to-action buttons.
+*  ?! Different color shades have also been used on the hover state of the social media icons on the Contact page to match the icons.
+
+  ![Color scheme]() 
