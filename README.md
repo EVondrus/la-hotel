@@ -16,4 +16,12 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ## Contents
 
-todo
+TODO
+
+## User Experience
+
+### Initial Discussion
+
+- This project is something I wanted to create as I'm a passionate traveler which led me to use plenty of hotel booking sites and I've previously been working in the hotel buisness as well.
+- I wanted to create a website linked to a database, which allows users to log in, view hotel information, room details, and make room reservations.
+- I wanted the administration to be able to add, edit and delete hotel information, room details and reservations.
