@@ -12,10 +12,12 @@
     "**/core.python*": true,
     "**/CVS": true
   },
-  "files.autoSave": "off",
+  "files.autoSave": "afterDelay",
   "workbench.colorTheme": "Halcyon",
   "terminal.integrated.gpuAcceleration": "canvas",
 
+  "better-comments.multilineComments": true,
+  "better-comments.highlightPlainText": false,
   "better-comments.tags": [
     {
       "tag": "!",
