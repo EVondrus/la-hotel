@@ -1,18 +1,66 @@
 {
   "files.exclude": {
-      "**/.DS_Store": true,
-      "**/.git": true,
-      "**/.github": true,
-      "**/.gitp*": true,
-      "**/.hg": true,
-      "**/.svn": true,
-      "**/.vscode": true,
-      "**/core.Microsoft*": true,
-      "**/core.mongo*": true,
-      "**/core.python*": true,
-      "**/CVS": true
-   },
-   "files.autoSave": "off",
-   "workbench.colorTheme": "Visual Studio Dark",
-   "terminal.integrated.gpuAcceleration": "canvas",
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.github": true,
+    "**/.gitp*": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.vscode": true,
+    "**/core.Microsoft*": true,
+    "**/core.mongo*": true,
+    "**/core.python*": true,
+    "**/CVS": true
+  },
+  "files.autoSave": "off",
+  "workbench.colorTheme": "Halcyon",
+  "terminal.integrated.gpuAcceleration": "canvas",
+
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ]
 }
