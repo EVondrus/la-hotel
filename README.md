@@ -66,8 +66,23 @@ TBC
 - These choices were made with a keen focus on readability and accessibility, ensuring a welcoming experience for users with dyslexia and partial visual impairments.
 - The elegance and readability of these fonts contribute to the app's overall sophistication and ease of use.
 - By utilizing the standard HTML font size of 16px, ensuring to not have any fonts smaller than that, to aid visually impaired users.
-- Also, the recommended smallest font size for accessible websites is 12px, so by keeping all font sizes at the HTML standard of  (?! 16px) or above, I ensured to be fully compliant with the [Penn State University Accessibility and Usability Guidelines](https://accessibility.psu.edu/fontsizehtml/).
+- Also, the recommended smallest font size for accessible websites is 12px, so by keeping all font sizes at the HTML standard of (?! 16px) or above, I ensured to be fully compliant with the [Penn State University Accessibility and Usability Guidelines](https://accessibility.psu.edu/fontsizehtml/).
 - Font sizes are also able to be zoomed to 200% without losing contrast or functionality, to comply with the [WCAG Guidelines on fonts](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html).
 - Lastly, to prevent the app from appearing overly assertive, I incorporated a mix of uppercase and lowercase text strategically.
 
 ![An example of the font used]()
+
+### Imagery
+
+- The imagery and logo featured within this hotel reservation app are meticulously crafted using [AI technologies]()
+- Integrated to forge a connection between the hotel's brand and the app's interface.
+- Subtle box shadows have been artfully applied. These design elements echo the hotel's graphic styling, characterized by neutral, soft colors and refined lines, enhancing the app's aesthetic appeal.
+- All links have their underlines removed for stylistic purposes. The links re-gain their underlines when they're hovered over or focused on.
+- All interactable objects have hover and focus styles applied to make it clear to the user that those objects are interactable.
+- Icons from [Font Awesome](https://fontawesome.com/) have been used on the site to add meaning where relevant and suitable. These icons are accompanied by either visible text or descriptive aria-labels, ensuring inclusivity and accessibility.
+- Button and link colors have been used to convey meaning, mainly in the use of the color dark red to convey 'Delete' or 'Cancel' as dangerous actions.
+
+### Wireframes
+
+- [Wireframes for desktop, mobile, and tablet for this project]().
+- [ER Diagram for this project]().
