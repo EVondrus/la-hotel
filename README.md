@@ -94,14 +94,39 @@ TBC
 - This feature allows the user to:
 - Get a view of the hotel's ambiance with high-quality images and engaging text, providing visitors with a glimpse of the hotel's offerings.
 - Viewing the room types in a carousell - each option linking to a detailed room description page with the choice to make a room reservation.
-- View contact information and location
+- View contact information and location.
+
+#### User profile registration
+
+- This feature allows the user to:
+
+  - Register for an account with an email address, first name, last name and password.
+  - Ensure no typos by entering the password twice, with the site checking to confirm that the passwords match.
+  - _?!?CHECK?!?_ Ensure the correct email address by sending a verification email to the email address the user has supplied.
+  - &#128100; Store their details for faster checkout.
+  - &#128100; Keep a record of their reservation history.
+
+![User's profile, including details update form]()
+
+### Log in
+
+- This feature allows the user to:
+
+  - Log in to the site with email address and password.
+    - Check the box to "remeber me" for upcoming logins.
+    - Click the link to reset password if forgotten.
+  - Browse their profile page.
+    - View, update and delete their profile details.
+    - Change password.
+  - Browse their room reservations (if they have any).
+    - View, update and cancel room reservations.
 
 ### Room Category page
 
 - This feature allows the user to:
 
   - View all room categories of the hotel on the website.
-  - Browse rooms category through the main navigation bar or carousell from the homepage.
+    - Browse room categories through the main navigation bar or carousell from the homepage.
   - Input check in and check out dates to see avaliable room types for the desired stay.
   - Get an overview of what the different room categories offer, including a image, brief description of features and amenities, capacity and price.
   - Click on a room detail card to be redirected to the full room details pages.
@@ -121,9 +146,8 @@ TBC
     - **Description:** A detailed description of the room's features, amenities, and unique selling points.
     - **User Input for Check-In and Check-Out Dates:** Allows users to input their preferred check-in and check-out dates to see if the room is available during those days.
     - **Availability Status:** Clearly indicates whether the room is available for the selected dates, enhancing the booking process's transparency.
-  
-  - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button. <br>
-  This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
 
+  - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button. <br>
+    This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
 
 ![Room Detail page with book button]()
