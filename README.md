@@ -1,4 +1,4 @@
-# La Hotel
+# [La Hotel](#la-hotel)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/EVondrus/la-hotel)
 ![GitHub last commit](https://img.shields.io/github/last-commit/EVondrus/la-hotel)
@@ -14,9 +14,92 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ![Final project mockup screenshot from Am I Responsive]()
 
-## Contents
+## [Contents](#contents)
 
-_TODO_
+- [Icon Key](#icon-key)
+- [User Experience](#user-experience)
+  - [Initial Discussion](#initial-discussion)
+  - [User Stories](#user-stories)
+  - [Project Goals](#project-goals)
+- [Design](#design)
+  - [Color Scheme](#color-scheme)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+  - [Wireframes](#wireframes)
+- [Features](#features)
+  - [Home page](#home-page)
+    - [User profile registration](#user-profile-registration)
+    - [Log in](#log-in)
+  - [Room Category page](#room-category-page)
+  - [Room Detail page](#room-detail-page)
+  - [Booking Page](#booking-page)
+    - [Reservation Confirmation](#reservation-confirmation)
+  - [Navigation bar](#navigation-bar)
+  - [About Section](#about-section)
+  - [Contact section](#contact-section)
+  - [Future Features](#future-features)
+  - [Defensive Design](#defensive-design)
+- [Database Design](#database-design)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+  - [Workspace](#workspace)
+    - [GitPod & Visual Studio Code](#gitpod---visual-studio-code)
+  - [Version Control](#version-control)
+    - [Git](#git)
+    - [GitHub](#github)
+  - [Wireframing](#wireframing)
+    - [Balsamiq](#balsamiq)
+    - [Database Design](#database-design)
+  - [Responsive Design](#responsive-design)
+    - [Am I Responsive Design](#am-i-responsive-design)
+    - [Responsinator](#responsinator)
+  - [Documentation](#documentation)
+    - [Shields.io](#shieldsio)
+    - [Markdown-toc](#markdown-toc-generator)
+    - [Markdownlint extension](#markdownlint-extension)
+  - [Site Design](#site-design)
+    - [Font Awesome](#font-awesome)
+    - [Google Fonts](#google-fonts)
+    - [Favicon.io](#faviconio)
+  - [Packages](#packages)
+  - [Hosting](#hosting)
+    - [Heroku](#heroku)
+  - [Frameworks, Libraries, and Others](#frameworks--libraries--and-others)
+    - [Google DevTools](#google-devtools)
+    - [Lighthouse](#lighthouse)
+    - [Bootstrap](#bootstrap)
+    - [pip](#pip)
+- [Deployment](#deployment)
+  - [Testing](#testing)
+  - [Solved Bugs](#solved-bugs)
+  - [Known Bugs](#known-bugs)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgments](#acknowledgments)
+
+---
+
+## Icon key
+
+&#128272; <-- Superuser only access
+
+&#128100; <-- Logged In Only
+
+&#128683; <-- Logged Out only
+
+&#9989; <-- Yes / Visible
+
+&#10060; <-- No / Not visible
+
+[Back to the top](#la-hotel)
+
+---
 
 ## User Experience
 
@@ -36,7 +119,7 @@ _TODO_
 - Designed with a user-centric approach, the platform should cater the needs of site users, site owners, staff users, and admin users.
 - This project also demonstrates my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality, using CI SQL database, and Cloudinairy Services
 
-[Back to the top](#)
+[Back to the top](#contents)
 
 ---
 
@@ -50,7 +133,7 @@ _TODO_
 - A dark green has been used for the sucess messages, to signify that this is a successive action.
 - A dark red has been used for all Delete buttons, to signify that this is a destructive action.
 - The darker yellow has been used for the hover state of the call-to-action buttons.
-- ?! Different color shades have also been used on the hover state of the social media icons on the Contact page to match the icons.
+- Different color shades have also been used on the hover state of the social media icons on the Contact page to match the icons.
 
 ![Color scheme]()
 
@@ -64,7 +147,7 @@ _TODO_
 - Font sizes are also able to be zoomed to 200% without losing contrast or functionality, to comply with the [WCAG Guidelines on fonts](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html).
 - Lastly, to prevent the app from appearing overly assertive, I incorporated a mix of uppercase and lowercase text strategically.
 
-![An example of the font used]()
+![An example of the fonts used]()
 
 ### Imagery
 
@@ -80,6 +163,10 @@ _TODO_
 
 - [Wireframes for desktop, mobile, and tablet for this project]().
 - [ER Diagram for this project]().
+
+[Back to the top](#contents)
+
+---
 
 ## Features
 
@@ -141,8 +228,8 @@ _TODO_
     - **User Input for Check-In and Check-Out Dates:** Allows users to input their preferred check-in and check-out dates to see if the room is available during those days.
     - **Availability Status:** Clearly indicates whether the room is available for the selected dates, enhancing the booking process's transparency.
 
-  - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button. <br>
-    This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
+  - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button.
+    - This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
 
 ![Room Detail page with book button]()
 
@@ -238,7 +325,7 @@ The navigation bar changes depending on user status and screen size:
 
 ### Defensive Design ! TBC !
 
-[Back to the top](#)
+[Back to the top](#contents)
 
 ---
 
@@ -313,7 +400,11 @@ This database uses a SQL database through Code Institute.
 
 [Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
 
-#### markdownlint extension
+#### Markdown toc generator
+
+[Markdown-toc](https://ecotrust-canada.github.io/markdown-toc/) was used to create the table of contents.
+
+#### Markdownlint extension
 
 [markdownlint Extension](https://open-vsx.org/vscode/item?itemName=DavidAnson.vscode-markdownlint) was used on GitPod and VS Code to ensure all markdown was correctly formatted.
 
@@ -365,7 +456,7 @@ This database uses a SQL database through Code Institute.
 
 [pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
 
-[Back to the top](#)
+[Back to the top](#contents)
 
 ---
 
@@ -379,7 +470,7 @@ This database uses a SQL database through Code Institute.
 
 ### Known Bugs
 
-[Back to the top](#)
+[Back to the top](#contents)
 
 ---
 
@@ -395,4 +486,4 @@ This database uses a SQL database through Code Institute.
 
 ### Acknowledgments
 
-[Back to the top](#)
+[Back to the top](#contents)
