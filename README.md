@@ -16,7 +16,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ## Contents
 
-TODO
+_TODO_
 
 ## User Experience
 
@@ -28,7 +28,7 @@ TODO
 
 ### User Stories
 
-TODO
+_TODO_
 
 ### Project Goals
 
@@ -42,14 +42,10 @@ TODO
 
 ## Design
 
-### Color Scheme
-
-TBC
+### Color Scheme ! TBC !
 
 - The main colors used in this site are Dark Slater Blue, Gold/Beige and Cloudy White.
-
-* These main colors are the colors in the hotels's logo, and they permeate through the site.
-
+- These main colors are the colors in the hotels's logo, and they permeate through the site.
 - These colors were each selected to embody the serene elegance and natural beauty of a Scandinavia, reflecting the tranquil ambiance and sophisticated charm of the setting.
 - A dark green has been used for the sucess messages, to signify that this is a successive action.
 - A dark red has been used for all Delete buttons, to signify that this is a destructive action.
@@ -58,9 +54,7 @@ TBC
 
 ![Color scheme]()
 
-### Typography
-
-TBC
+### Typography ! TBC !
 
 - For the fonts, I selected Roboto Slab for headings and Open Sans for body text, both available through Google Fonts.
 - These choices were made with a keen focus on readability and accessibility, ensuring a welcoming experience for users with dyslexia and partial visual impairments.
@@ -152,7 +146,7 @@ TBC
 
 ![Room Detail page with book button]()
 
-### Book Page ! TBC !
+### Booking Page ! TBC !
 
 - This feature allows the user to:
   - Make reservation as a guest user
@@ -220,3 +214,37 @@ The navigation bar changes depending on user status and screen size:
 
 ![Mobile navigation burger icon]()
 ![Mobile navigation bar expanded]()
+
+### About Section
+
+- This feature allows the user to:
+  - Read about the hotel, it's history and owners.
+  - Navigate to the room categories.
+  - Navigate to any of the hotel's social media pages.
+
+![The About page]()
+
+### Contact section
+
+- This feature allows the user to:
+  - Contact the hotel via email for queries about their stay or reservation.
+  - View adress and location including google maps. _?!? CHECK ?!?_
+  - View phone number to contact the hotel in a quicker manner.
+  - Navigate to any of the hotel's social media pages.
+
+![The Contact Us page]()
+
+### Future Features ! TBC !
+
+### Defensive Design ! TBC !
+
+[Back to the top](#)
+
+---
+
+## Database Design ! TBC !
+
+This database uses a SQL database through Code Institute.
+[ER Diagram]()
+
+---
