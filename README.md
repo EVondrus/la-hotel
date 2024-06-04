@@ -248,3 +248,151 @@ This database uses a SQL database through Code Institute.
 [ER Diagram]()
 
 ---
+
+## Technologies Used
+
+### Languages Used
+
+#### HTML
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+
+#### CSS
+
+- [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3#:~:text=CSS3%20is%20the%20latest%20evolution,flexible%20box%20or%20grid%20layouts.)
+
+#### JavaScript
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+#### Python
+
+- [Python](https://www.python.org/)
+- This project uses Python 3.12.3.
+
+### Workspace
+
+#### GitPod & Visual Studio Code
+
+[GitPod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
+[Visual Studio Code](https://code.visualstudio.com/) was used as a local IDE workspace to build the site.
+
+### Version Control
+
+#### Git
+
+[Git](https://git-scm.com/) Git was used for version control. The Gitpod and VS Code terminals were utilized to add, commit to Git and pushed to GitHub.
+
+#### GitHub
+
+[GitHub](https://github.com/) is used to store the code for this project.
+
+### Wireframing
+
+#### Balsamiq
+
+[Balsamiq](https://balsamiq.com/) was used for creating wireframes to plan the layout and structure of the site
+
+#### Database Design
+
+![Lucidcharts](https://lucid.co/) was used to create Entity-Relationship Diagrams (ERDs) to design the database schema.
+
+### Responsive Design
+
+#### Am I Responsive Design
+
+[Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the site's responsive design and create the final site image.
+
+#### Responsinator
+
+[Responsinator](http://www.responsinator.com/) was used to improve the site's responsive design on a variety of devices.
+
+### Documentation
+
+#### Shields.io
+
+[Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
+
+#### markdownlint extension
+
+[markdownlint Extension](https://open-vsx.org/vscode/item?itemName=DavidAnson.vscode-markdownlint) was used on GitPod and VS Code to ensure all markdown was correctly formatted.
+
+### Site Design !TBC !
+
+#### Font Awesome
+
+[Font Awesome](https://fontawesome.com/) was used on all pages to add icons.
+
+#### Google Fonts
+
+[Google Fonts](https://fonts.google.com/) was used to select the fonts for the site.
+
+#### Favicon.io
+
+[favicon.io](https://favicon.io/) was used to create the site favicon.
+
+### Packages ! TBC !
+
+| Name                | Purpose                  |
+| ------------------- | ------------------------ |
+| Django              | Framework                |
+| django-allauth      | Authentication           |
+| django-crispy-forms | Front End Form Rendering |
+| dj-database-url     | Database Configuration   |
+| gunicorn            | WSGI HTTP Server         |
+
+### Hosting ! TBC !
+
+#### Heroku
+
+[Heroku](https://www.heroku.com) was used to deploy the live site.
+
+### Frameworks, Libraries, and Others ! TBC !
+
+#### Google DevTools
+
+[Google DevTools](https://developer.chrome.com/docs/devtools/)was used to identify the code corresponding to specific features.
+
+#### Lighthouse
+
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure the code was performant, followed best practices, and adhered to SEO and accessibility guidelines.
+
+#### Bootstrap
+
+[Bootstrap](https://getbootstrap.com/) was used to create a beautiful, responsive website.
+
+#### pip
+
+[pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
+
+[Back to the top](#)
+
+---
+
+## Deployment ! TBC !
+
+### Testing ! TBC !
+
+[Click here to view the full testing steps](), which were completed on Google Chrome, Safari and...., and screenshots of testing.
+
+### Solved Bugs ! TBC !
+
+### Known Bugs
+
+[Back to the top](#)
+
+---
+
+## Credits
+
+### Code
+
+### Content
+
+### Media
+
+- All media on this site is created by me and my partner Mladen Djurdjevic, using AI technologies.
+
+### Acknowledgments
+
+[Back to the top](#)
