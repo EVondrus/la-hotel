@@ -233,6 +233,45 @@ _TODO_
 
 ![Room Detail page with book button]()
 
+#### &#128272; Create, Edit and Delete Room details _?!? CHECK ?!?_
+
+- This feature allows the superuser to:
+  - Add a new category and/or room details to the hotel.
+  - Edit an existing categoy or room details.
+  - Delete an existing category or room.
+  - Include images, by uploading directly from the superuser's computer.
+
+![Admin functionality to create, update or room details]()
+
+#### &#128272; Create, Edit and Delete Hotel details _?!? CHECK ?!?_
+
+- This feature allows the superuser to:
+  - Add a new details to the About and Contact page.
+  - Edit an existing information.
+  - Delete an existing information.
+  - Include images, by uploading directly from the superuser's computer.
+
+![Admin functionality to create, update or delete hotel details]()
+
+#### &#128272; Create, Edit and Delete Room reservations _?!? CHECK ?!?_
+
+- This feature allows the superuser to:
+
+  - Add a new room reservation.
+  - Edit an existing reservation.
+  - Delete an existing reservation.
+
+  ![Admin functionality to create, update or delete room reservation]()
+
+#### Confirm to delete modal
+
+- This feature allows the user to:
+
+  - &#128272; Confirm cancelation of a reservation or deletion of their profile.
+  - &#128272; Avoid accidentally cancelling or deleting.
+
+  ![Confirm to cancel/delete modal]()
+
 ### Booking Page ! TBC !
 
 - This feature allows the user to:
