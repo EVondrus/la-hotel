@@ -103,12 +103,12 @@ TBC
   - Register for an account with an email address, first name, last name and password.
   - Ensure no typos by entering the password twice, with the site checking to confirm that the passwords match.
   - _?!?CHECK?!?_ Ensure the correct email address by sending a verification email to the email address the user has supplied.
-  - &#128100; Store their details for faster checkout.
+  - &#128100; Store their details for faster booking.
   - &#128100; Keep a record of their reservation history.
 
 ![User's profile, including details update form]()
 
-### Log in
+#### Log in
 
 - This feature allows the user to:
 
@@ -151,3 +151,72 @@ TBC
     This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
 
 ![Room Detail page with book button]()
+
+### Book Page ! TBC !
+
+- This feature allows the user to:
+  - Make reservation as a guest user
+  - &#128100; The details will be filled from any details given in the user profile.
+    - First name, lastname
+    - emailadress
+    - phonenumber
+    - address
+  - The details will be filled from any details if given in the room details page.
+    - Input/Update check in and check out dates.
+    - Edit Number of guests.
+    - Edit the quantity of rooms.
+    - Edit or delete room category for the the reservation.
+  - View the total cost and details of the reservation.
+
+![Reservation form with prefilled user information]()
+
+#### Reservation Confirmation
+
+- If the reservation fails:
+  - The user is directed back to the reservation form.
+  - The user is shown a message that the payment failed.
+- If the payment succeeds:
+  - The user will be sent a confirmation email. _?!? CHECK ?!?_
+  - The email contains the full order details and order number.
+  - The user will be redirected to the success page. _?!? CHECK ?!?_
+  - A message will display, informing the user that the payment succeeded, containing the order details and booking ID.
+  - &#128100; The order will be added to the user's order history in their profile.
+
+### Navigation bar
+
+The navigation bar changes depending on user status and screen size:
+
+| Nav Link         | &#128683; | &#128100; | &#128272; |
+| ---------------- | --------- | --------- | --------- |
+| Logo (Homepage)  | &#9989;   | &#9989;   | &#9989;   |
+| Home             | &#9989;   | &#9989;   | &#9989;   |
+| Rooms            | &#9989;   | &#9989;   | &#9989;   |
+| Book             | &#9989;   | &#9989;   | &#9989;   |
+| Contact Us       | &#9989;   | &#9989;   | &#9989;   |
+| About            | &#9989;   | &#9989;   | &#9989;   |
+| Hotel Management | &#10060;  | &#10060;  | &#9989;   |
+| Profile          | &#10060;  | &#9989;   | &#9989;   |
+| Log Out          | &#10060;  | &#9989;   | &#9989;   |
+| Log In           | &#9989;   | &#10060;  | &#10060;  |
+| Register         | &#9989;   | &#10060;  | &#10060;  |
+
+- Navigation bar
+
+![Overall navigation bar]()
+
+- Logged in
+
+![Logged in navigation dropdown]()
+
+- Logged out
+
+![Logged out navigation dropdown]()
+
+- An admin
+
+![Admin navigation dropdown]()
+
+- On small screen sizes
+
+![Mobile navigation burger icon]()
+![Mobile navigation bar expanded]()
