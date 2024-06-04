@@ -86,3 +86,44 @@ TBC
 
 - [Wireframes for desktop, mobile, and tablet for this project]().
 - [ER Diagram for this project]().
+
+## Features
+
+### Home page
+
+- This feature allows the user to:
+- Get a view of the hotel's ambiance with high-quality images and engaging text, providing visitors with a glimpse of the hotel's offerings.
+- Viewing the room types in a carousell - each option linking to a detailed room description page with the choice to make a room reservation.
+- View contact information and location
+
+### Room Category page
+
+- This feature allows the user to:
+
+  - View all room categories of the hotel on the website.
+  - Browse rooms category through the main navigation bar or carousell from the homepage.
+  - Input check in and check out dates to see avaliable room types for the desired stay.
+  - Get an overview of what the different room categories offer, including a image, brief description of features and amenities, capacity and price.
+  - Click on a room detail card to be redirected to the full room details pages.
+
+![Room Category page with date inputs]()
+
+### Room Detail page
+
+- This feature allows the user to:
+
+  - View comprehensive details about each room category, including:
+
+    - **Category:** The type of room (e.g., Standard, Deluxe, Suite).
+    - **Price Per Night:** The cost associated with booking the room for one night.
+    - **Capacity:** The maximum number of guests the room can accommodate.
+    - **Image Gallery:** High-quality images showcasing the room from various angles and amenities.
+    - **Description:** A detailed description of the room's features, amenities, and unique selling points.
+    - **User Input for Check-In and Check-Out Dates:** Allows users to input their preferred check-in and check-out dates to see if the room is available during those days.
+    - **Availability Status:** Clearly indicates whether the room is available for the selected dates, enhancing the booking process's transparency.
+  
+  - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button. <br>
+  This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details, choose additional services,
+
+
+![Room Detail page with book button]()
