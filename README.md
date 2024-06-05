@@ -119,7 +119,7 @@ _TODO_
 - Designed with a user-centric approach, the platform should cater the needs of site users, site owners, staff users, and admin users.
 - This project also demonstrates my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality, using CI SQL database, and Cloudinairy Services
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
 
 ---
 
@@ -164,7 +164,7 @@ _TODO_
 - [Wireframes for desktop, mobile, and tablet for this project]().
 - [ER Diagram for this project]().
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
 
 ---
 
@@ -364,7 +364,7 @@ The navigation bar changes depending on user status and screen size:
 
 ### Defensive Design ! TBC !
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
 
 ---
 
@@ -495,7 +495,7 @@ This database uses a SQL database through Code Institute.
 
 [pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
 
 ---
 
@@ -509,7 +509,7 @@ This database uses a SQL database through Code Institute.
 
 ### Known Bugs
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
 
 ---
 
@@ -525,4 +525,4 @@ This database uses a SQL database through Code Institute.
 
 ### Acknowledgments
 
-[Back to the top](#contents)
+[Back to the top](#la-hotel)
