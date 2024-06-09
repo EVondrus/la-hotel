@@ -1,0 +1,1 @@
+web: gunicorn la_hotel.wsgi

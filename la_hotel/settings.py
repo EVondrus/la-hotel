@@ -30,7 +30,10 @@ if os.path.exists('env.py'):
 # If the variable DEVELOPMENT is in the environment, DEBUG is set to True
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '.herokuapp.com'
+]
 
 
 # Application definition
