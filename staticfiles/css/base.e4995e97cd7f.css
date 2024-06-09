@@ -1,0 +1,68 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap");
+
+:root {
+  /* Fonts */
+  --title: "Roboto Slab", serif;
+  --main-font: "Open Sans", sans-serif;
+
+  /* Colours */
+  --background: #003940;
+  --blue: #1f8297;
+  --gold: #cb9703;
+  --dark-yellow: #b08307;
+  --cloud-white: #f6f5f1;
+  --dark-red: #9c1b23;
+  --dark-green: #0b5e1b;
+
+  /* Utils */
+  --smal-box-shadow: 1px -1px 7px 0 #00000061;
+  --border: 1px solid #00000030;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+  color: var(--gold);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Header */
+.navbar {
+  background-color: var(--background) !important;
+  box-shadow: var(--smal-box-shadow);
+}
+
+a.nav-link {
+  color: var(--cloud-white);
+}
+
+.active {
+  border-bottom: 2px solid var(--dark-yellow);
+  font-weight: 500;
+  color: var(--cloud-white) !important;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
