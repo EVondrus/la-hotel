@@ -66,3 +66,23 @@ a.nav-link {
   right: 0;
   left: auto;
 }
+
+/* Footer */
+footer {
+  background-color: var(--background);  
+  border-top: var(--border);
+}
+
+.social-icon {
+  height: 2rem;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: var(--cloud-white);
+  
+}
+
+.copyright {
+  color: var(--cloud-white);
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}

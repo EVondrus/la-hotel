@@ -1,0 +1,23 @@
+{% load static %}
+
+<footer class="fixed-bottom container-fluid pb-2 pt-2 text-center text-transform-none">
+  <div class="row d-flex justify-content-around">
+    <!-- Social media -->
+    <div class="col-4 col-md-4">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Link to our facebook page(opens in a new tab)">
+        <i class="fa-brands fa-facebook social-icon"></i>
+      </a>
+    </div>
+    <!-- Copyright-->
+    <div class="col-4 col-md-4 d-flex align-items-center justify-content-center">
+      <p class="copyright margin-auto">
+        Copyright <br /> &copy; La Hotel <span id="copyright">{% now "Y" %}</span>
+      </p>
+    </div>
+    <div class="col-4 col-md-4">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Link to our instagram page(opens in a new tab)">
+        <i class="fa-brands fa-instagram social-icon"></i>
+      </a>
+    </div>
+  </div>
+</footer>
