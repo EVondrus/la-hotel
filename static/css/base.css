@@ -71,6 +71,43 @@ a.nav-link {
   left: auto;
 }
 
+/* Banner */
+.jumbotron {
+  background-image: url("../images/la-hotel-banner.webp");
+  background-size: cover;
+  color: var(--cloud-white); 
+  height: 35vh;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  font-family: var(--main-font);
+  font-weight: 500;
+  color: var(--cloud-white);
+}
+
+.jumbotron h1,.jumbotron p {
+  margin-left: 20px;
+  text-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+a.btn {
+  background-color: var(--gold);
+  color: var(--cloud-white); 
+  margin-left: 20px;
+}
+
+a.btn:hover {
+  background-color: var(--dark-yellow);
+}
+
 /* Footer */
 footer {
   background-color: var(--background);
