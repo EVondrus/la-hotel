@@ -5,7 +5,11 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" href=" {% url 'home' %}">
-        <img src="#" alt="La Hotel Logo" class="logo" />
+        <img
+          src="{% static 'images/la-hotel-logo.webp' %}"
+          alt="La Hotel Logo"
+          class="logo"
+        />
       </a>
       <!-- Toggle for smaller screens-->
       <button
@@ -56,7 +60,7 @@
               <a class="dropdown-item" href="#">Log In</a>
               <a class="dropdown-item" href="#">Profile</a>
               <a class="dropdown-item" href="#">Reservations</a>
-          </div>
+            </div>
           </li>
         </ul>
       </div>
