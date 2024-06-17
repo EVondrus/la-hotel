@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+<!--Prettier Ignore-->
 {% load static %}
+<!--Prettier Ignore-->
 {% block title %}Home{% endblock %}
 
+<!--Prettier Ignore-->
 {% block content %}
 <div class="jumbotron">
   <div class="container">
@@ -16,4 +19,37 @@
     </div>
   </div>
 </div>
-{% endblock %}
+
+<div class="container d-flex flex-column ">
+  <div class="row">
+    <div class="col-6 d-none d-sm-block">
+      <img src="" alt="" />
+    </div>
+    <div class="col-12 col-sm-6 mt-5 px-5">
+      <h4>Nestled along the stunning coastline</h4>
+      <p>
+        Landskrona Hotel offers a luxurious retreat with breathtaking ocean views, elegant rooms, and
+        top-notch amenities. <br> Whether for a relaxing getaway or a business trip,
+        our dedicated staff ensures a memorable stay. <br><br>
+        Our hotel is located in the heart of Landskrona, a charming town with a
+        rich history and vibrant culture.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="row">
+      <div class="col-12 text-center mt-5">
+        <h2>Discover Our Rooms</h2>
+      </div>
+      {% include 'home/carousel.html' %}
+    </div>
+  </div>
+
+  <!--Prettier Ignore-->
+  {% endblock %}
+</div>

@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
+  color: var(--cloud-white);
 }
 
 h1,
@@ -75,7 +76,7 @@ a.nav-link {
 .jumbotron {
   background-image: url("../images/la-hotel-banner.webp");
   background-size: cover;
-  color: var(--cloud-white); 
+  color: var(--cloud-white);
   height: 35vh;
   display: flex;
   align-items: center;
@@ -87,25 +88,24 @@ a.nav-link {
   color: var(--cloud-white);
 }
 
-.jumbotron h1,.jumbotron p {
+.jumbotron h1,
+.jumbotron p {
   margin-left: 20px;
-  text-shadow: 
-    0 0 5px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(0, 0, 0, 0.5),
-    0 0 15px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(0, 0, 0, 0.5),
-    0 0 25px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 a.btn {
-  background-color: var(--gold);
-  color: var(--cloud-white); 
+  background-color: var(--dark-yellow);
+  color: var(--cloud-white);
+  padding: 6px 25px;
   margin-left: 20px;
+  box-shadow: var(--smal-box-shadow);
 }
 
 a.btn:hover {
-  background-color: var(--dark-yellow);
+  background-color: var(--gold);
 }
 
 /* Footer */
