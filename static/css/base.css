@@ -7,11 +7,11 @@
   --main-font: "Open Sans", sans-serif;
 
   /* Colours */
-  --background: #003940;
+  --cloudy-white: #f6f5f1;
   --blue: #1f8297;
   --gold: #cb9703;
   --dark-yellow: #b08307;
-  --cloud-white: #f6f5f1;
+  --slate-green: #003940;
   --dark-red: #9c1b23;
   --dark-green: #0b5e1b;
 
@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
-  color: var(--cloud-white);
+  color: var(--slate-green);
 }
 
 h1,
@@ -44,12 +44,12 @@ h6 {
 
 main {
   flex: 1 0 auto;
-  background-color: var(--background);
+  background-color: var(--cloudy-white);
 }
 
 /* Header */
 .navbar {
-  background-color: var(--background) !important;
+  background-color: var(--slate-green) !important;
   box-shadow: var(--smal-box-shadow);
 }
 
@@ -58,13 +58,13 @@ img.logo {
 }
 
 a.nav-link {
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
 }
 
 .active {
   border-bottom: 2px solid var(--dark-yellow);
   font-weight: 500;
-  color: var(--cloud-white) !important;
+  color: var(--cloudy-white) !important;
 }
 
 .dropdown-menu-right {
@@ -76,7 +76,7 @@ a.nav-link {
 .jumbotron {
   background-image: url("../images/la-hotel-banner.webp");
   background-size: cover;
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
   height: 35vh;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ a.nav-link {
 .jumbotron h1 {
   font-family: var(--main-font);
   font-weight: 500;
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
 }
 
 .jumbotron h1,
@@ -98,10 +98,14 @@ a.nav-link {
 
 a.btn {
   background-color: var(--dark-yellow);
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
   padding: 6px 25px;
   margin-left: 20px;
   box-shadow: var(--smal-box-shadow);
+}
+
+a.btn-book {
+  background-color: var(--slate-green);
 }
 
 a.btn:hover {
@@ -110,7 +114,7 @@ a.btn:hover {
 
 /* Footer */
 footer {
-  background-color: var(--background);
+  background-color: var(--slate-green);
   border-top: var(--border);
 }
 
@@ -118,11 +122,11 @@ footer {
   height: 2rem;
   margin: 1rem;
   font-size: 1.4rem;
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
 }
 
 .copyright {
-  color: var(--cloud-white);
+  color: var(--cloudy-white);
   font-size: 0.8rem;
   margin-top: 0.8rem;
 }
