@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   font-family: var(--main-font);
   color: var(--slate-green);
+  overflow-y: auto;
 }
 
 h1,
@@ -96,6 +97,7 @@ a.nav-link {
     0 0 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Buttons */
 a.btn {
   background-color: var(--dark-yellow);
   color: var(--cloudy-white);
@@ -108,8 +110,44 @@ a.btn-book {
   background-color: var(--slate-green);
 }
 
-a.btn:hover {
+.btn-gold {
+  background-color: var(--dark-yellow);
+  width: 13rem;
+}
+
+a.btn:hover,
+.btn-gold:hover,
+a.btn-book:hover {
   background-color: var(--gold);
+}
+
+/* Log In */
+.form {
+  width: 80%;
+  margin: 5% auto;
+  box-shadow: var(--smal-box-shadow);
+  border-radius: 5px;
+}
+
+.form-control {
+  border: var(--border);
+  box-shadow: var(--smal-box-shadow);
+  margin-left: 10%;
+  width: 80%;
+}
+
+.container-scroll {
+  height: 100vh;
+}
+
+.text-green {
+  color: var(--dark-yellow);
+  font-weight: 600;
+}
+
+.form-check .form-check-input {
+  float: none;
+  border: var(--border);
 }
 
 /* Footer */
