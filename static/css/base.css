@@ -145,6 +145,10 @@ a.btn-book:hover {
   font-weight: 600;
 }
 
+.text-gold:hover {
+  color: var(--slate-green);
+}
+
 .form-check .form-check-input {
   float: none;
   border: var(--border);
