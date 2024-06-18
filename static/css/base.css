@@ -121,7 +121,7 @@ a.btn-book:hover {
   background-color: var(--gold);
 }
 
-/* Log In */
+/* Log In, Sign Up forms */
 .form {
   width: 80%;
   margin: 5% auto;
@@ -140,7 +140,7 @@ a.btn-book:hover {
   height: 100vh;
 }
 
-.text-green {
+.text-gold {
   color: var(--dark-yellow);
   font-weight: 600;
 }
@@ -149,6 +149,11 @@ a.btn-book:hover {
   float: none;
   border: var(--border);
 }
+/* Check if ok for screenreaders */
+.form-text {
+  display: none;
+}
+
 
 /* Footer */
 footer {
