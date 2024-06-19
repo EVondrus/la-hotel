@@ -3,28 +3,29 @@
 {% block title %}
 {% trans "Sign In" %}{% endblock %} 
 {% block content %}
-<div class="container text-center mt-5 container-scroll">
-  <h1>{% trans "Sign In" %}</h1>
+<div class="container text-center my-5 container-scroll">
+	<h1>{% trans "Sign In" %}</h1>
 
-  <p>
+	<p>
     {% blocktrans %}If you have not created an account yet, then please
     <a class="text-gold" href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %}
-  </p>
+	</p>
 
-  <form class="form p-2" method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %} 
-    {{ form|crispy }} 
-    {% if redirect_field_value %}
-    <input
-      type="hidden"
-      name="{{ redirect_field_name }}"
-      value="{{ redirect_field_value }}"
-    />
+	<form class="form p-2" method="POST" action="{% url 'account_login' %}">
+		{% csrf_token %} 
+		{{ form|crispy }} 
+		{% if redirect_field_value %}
+	<input
+		type="hidden"
+		name="{{ redirect_field_name }}"
+		value="{{ redirect_field_value }}"
+	/>
     {% endif %}
     <button class="btn btn-gold mb-2" type="submit">
-      {% trans "Sign In" %}
+    	{% trans "Sign In" %}
     </button>
-  </form>
+	<a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+	</form>
 </div>
 
 {% endblock %}
