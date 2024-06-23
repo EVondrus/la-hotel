@@ -26,7 +26,7 @@
       <img src="" alt="" />
     </div>
     <div class="col-12 col-sm-6 mt-5 px-5">
-      <h4>Nestled along the stunning coastline</h4>
+      <h4 class="mb-4">Nestled along the stunning coastline...</h4>
       <p>
         Landskrona Hotel offers a luxurious retreat with breathtaking ocean views, elegant rooms, and
         top-notch amenities. <br> Whether for a relaxing getaway or a business trip,
@@ -46,10 +46,10 @@
       </div>
       {% include 'home/carousel.html' %}
   </div>
-	
+
 <!-- Manage Booking Details -->
 <div class="container d-flex flex-row flex-wrap justify-content-center">
-    <h2 class="text-center mt-4 d-block">Manage your bookings</h2>
+    <h2 class="text-center mt-4 d-block text-shadow">Manage your bookings</h2>
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-4 mb-4">
@@ -81,6 +81,36 @@
             <div class="col text-center">
                 <button class="btn btn-gold">View Profile and Reservations</button>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <div class="contact-container d-flex flex-wrap justify-content-between">
+        <div class="contact-info mb-4 text-center mx-2">
+            <div class="details">
+                <p class="text-green-p"><i class="fas fa-phone icon"></i>Phone:</p>
+                <p>+12 34567890</p>
+								<p>Call us for immediate assistance with your booking</p>
+            </div>
+        </div>
+				<div class="contact-info mb-4 text-center mx-2">
+            <div class="details">
+								<p class="text-green-p"><i class="fas fa-envelope icon"></i>Email:</p>
+								<p><a href="mailto:lahotek@example.com">lahotel@example.com</a></p>
+								<p>Contact us via email for detailed support with your inquiries</p>
+						</div>
+        </div>
+				<div class="contact-info mb-4 text-center mx-2">
+            <div class="details">
+							<p class="text-green-p"><i class="fas fa-map-marker-alt icon"></i>Address:</p>
+							<p>123 Main Street, Landskrona, Sweden</p>
+            </div>
+        </div>
+        <div class="google-map mb-4 mx-2">
+            <!-- Google Maps Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35808.438385803005!2d12.809636255828911!3d55.87953933893646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653b5c2755d2e61%3A0x9d17c1a5e060e6f8!2sLandskrona%20Slott!5e0!3m2!1ssv!2sse!4v1719149307291!5m2!1ssv!2sse" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </div>
