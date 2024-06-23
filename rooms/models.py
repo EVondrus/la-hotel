@@ -1,6 +1,13 @@
 from django.db import models
 from djmoney.models.fields import MoneyField
 
+class RoomCategory(models.Model):
+    code = models.CharField(max_length=3, unique=True)
+    name = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.name
+
 # Create your models here.
 class Room(models.Model):
     """
@@ -19,7 +26,7 @@ class Room(models.Model):
         )
 
     room_number = models.IntegerField(unique=True)
-    category = models.CharField(max_length=3, choices=ROOM_CATEGORIES)
+    category = models.ForeignKey(RoomCategory, on_delete=models.SET_NULL, null=True)
     beds = models.CharField(choices=BED_SIZE)
     max_guests = models.IntegerField()
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='EUR')
