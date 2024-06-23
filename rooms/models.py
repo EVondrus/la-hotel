@@ -2,29 +2,42 @@ from django.db import models
 from djmoney.models.fields import MoneyField
 
 # Create your models here.
-class Room(models.Model):
+class RoomCategory(models.Model):
     """
     Model representing a room in the hotel.
     """
     ROOM_CATEGORIES =(
-        ('STA', 'Standard'),
-        ('DEL', 'Deluxe'),
-        ('SUI', 'Suite')
+        ('STANDARD', 'Standard'),
+        ('DELUXE', 'Deluxe'),
+        ('SUITE', 'Suite')
         )
 
     BED_SIZE = (
-        ('DUB', 'Doubble'),
-        ('QUE', 'Queen'),
-        ('KIN', 'King')
+        ('DOUBLE', 'Doubble'),
+        ('QUEEEN', 'Queen'),
+        ('KING', 'King')
         )
 
-    room_number = models.IntegerField(unique=True)
-    category = models.CharField(max_length=3, choices=ROOM_CATEGORIES)
-    beds = models.CharField(choices=BED_SIZE)
-    max_guests = models.IntegerField()
+    category = models.CharField(max_length=10, choices=ROOM_CATEGORIES)
+    beds = models.CharField(max_length=10, choices=BED_SIZE)
+    capacity = models.IntegerField()
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='EUR')
     description = models.TextField(max_length=2000, help_text="Enter a brief description of the room", blank=True, null=True)
     image = models.ImageField(upload_to='room_images', default='room_images/default-room.webp')
 
     def __str__(self):
-        return f"{self.room_number}  {self.category} || Bed: {self.beds} - Guests: {self.max_guests} || {self.price}"
+        return f"{self.category} || Bed: {self.beds} - Guests: {self.capacity} || Price: {self.price}"
+
+class Room(models.Model):
+    """
+    Model representing a room in the hotel.
+    """
+    room_number = models.CharField(max_length=10, unique=True)
+    category = models.ForeignKey(RoomCategory, on_delete=models.CASCADE)
+    status = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = (('room_number', 'category'),)
+
+    def __str__(self):
+        return f"{self.room_number} - {self.category} - {self.status}"
