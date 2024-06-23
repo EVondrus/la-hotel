@@ -82,7 +82,7 @@ a.nav-link:hover {
   background-image: url("../images/la-hotel-banner.webp");
   background-size: cover;
   color: var(--cloudy-white);
-  height: 35vh;
+  height: 40vh;
   display: flex;
   align-items: center;
 }
@@ -127,6 +127,13 @@ a.btn-book:hover {
   background-color: var(--gold);
 }
 
+/* Home Page Image */
+.cover-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
 /* Log In, Sign Up forms */
 .form {
   width: 80%;
@@ -164,7 +171,7 @@ a.btn-book:hover {
   display: none;
 }
 
-/* Carousel & Images*/
+/* Carousel Images*/
 .custom-carousel-container {
   max-width: 85%; 
   margin: 0 auto;
