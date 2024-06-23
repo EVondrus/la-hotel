@@ -115,7 +115,9 @@ a.btn-book {
 }
 
 .btn-gold {
+  color: var(--cloudy-white);
   background-color: var(--dark-yellow);
+  box-shadow: var(--smal-box-shadow);
   width: 13rem;
 }
 
@@ -189,7 +191,12 @@ a.btn-book:hover {
   margin-bottom: 10px;
 }
 
+/* Home page manage account Cards */
 
+.manage-card {
+  border: 1px solid var(--dark-yellow);
+  box-shadow: var(--smal-box-shadow);
+}
 
 
 /* Footer */
