@@ -4,7 +4,7 @@ from djmoney.models.fields import MoneyField
 # Create your models here.
 class RoomCategory(models.Model):
     """
-    Model representing a room in the hotel.
+    Model representing a category of rooms in the hotel.
     """
     ROOM_CATEGORIES =(
         ('STANDARD', 'Standard'),
@@ -13,8 +13,8 @@ class RoomCategory(models.Model):
         )
 
     BED_SIZE = (
-        ('DOUBLE', 'Doubble'),
-        ('QUEEEN', 'Queen'),
+        ('DOUBLE', 'Double'),
+        ('QUEEN', 'Queen'),
         ('KING', 'King')
         )
 
@@ -32,9 +32,16 @@ class Room(models.Model):
     """
     Model representing a room in the hotel.
     """
+    ROOM_STATUS_CHOICES = (
+        ('AVAILABLE', 'Available'),
+        ('MAINTENANCE', 'Under Maintenance'),
+        ('BOOKED', 'Booked'),
+        ('OCCUPIED', 'Occupied'),
+    )
+
     room_number = models.CharField(max_length=10, unique=True)
     category = models.ForeignKey(RoomCategory, on_delete=models.CASCADE)
-    status = models.BooleanField(default=True)
+    status = models.CharField(max_length=15, choices=ROOM_STATUS_CHOICES, default='AVAILABLE')
 
     class Meta:
         unique_together = (('room_number', 'category'),)

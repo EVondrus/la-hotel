@@ -23,27 +23,27 @@ class Booking(models.Model):
 
 
     def __str__(self):
-        return f'{self.user} - {self.room} - {self.check_in} - {self.check_out} - {self.total_price}'
+        return f'{self.user} - {self.rooms} - {self.check_in} - {self.check_out} - {self.total_price}'
 
 
     class Meta:
         ordering = ['-check_in']
 
 
-    def save(self, *args, **kwargs):
-        """
-        Overrides the default save method to calculate the total price of the booking based on
-        the room category prices and the number of nights. The total price is calculated as 
-        the sum of the price for each room category multiplied by the number of nights.
+    # def save(self, *args, **kwargs):
+    #     """
+    #     Overrides the default save method to calculate the total price of the booking based on
+    #     the room category prices and the number of nights. The total price is calculated as 
+    #     the sum of the price for each room category multiplied by the number of nights.
 
-        Args:
-            *args: Variable length argument list.
-            **kwargs: Arbitrary keyword arguments.
-        """
-        nights = (self.check_out - self.check_in).days
-        total_price = sum(room.category.price * nights for room in self.rooms.all())
-        self.total_price = total_price
-        super().save(*args, **kwargs)
+    #     Args:
+    #         args: Variable length argument list.
+    #        kwargs: Arbitrary keyword arguments.
+    #    """
+    #     nights = (self.check_out - self.check_in).days
+    #     total_price = sum(room.category.price * nights for room in self.rooms.all())
+    #     self.total_price = total_price
+    #     super().save(*args, **kwargs)
 
 @receiver(pre_save, sender=Booking)
 def pre_save_booking(sender, instance, **kwargs):
