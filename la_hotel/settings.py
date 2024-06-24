@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'rooms',
+    'booking',
 
     # Other
     'crispy_forms',
