@@ -106,7 +106,6 @@ a.btn {
   background-color: var(--dark-yellow);
   color: var(--cloudy-white);
   padding: 6px 25px;
-  margin-left: 20px;
   box-shadow: var(--smal-box-shadow);
 }
 
@@ -187,6 +186,197 @@ a.btn-book:hover {
   color: #333; 
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+/* Banner */
+.jumbotron {
+  background-image: url("../images/la-hotel-banner.webp");
+  background-size: cover;
+  color: var(--cloudy-white);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  font-family: var(--main-font);
+  font-weight: 500;
+  color: var(--cloudy-white);
+}
+
+.jumbotron h1,
+.jumbotron p {
+  margin-left: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+a.btn {
+  background-color: var(--dark-yellow);
+  color: var(--cloudy-white);
+  padding: 6px 25px;
+  margin: 0px;
+  box-shadow: var(--smal-box-shadow);
+}
+
+a.btn-book {
+  background-color: var(--slate-green);
+}
+
+.btn-gold {
+  color: var(--cloudy-white);
+  background-color: var(--dark-yellow);
+  box-shadow: var(--smal-box-shadow);
+  width: 13rem;
+}
+
+a.btn:hover,
+.btn-gold:hover,
+a.btn-book:hover {
+  background-color: var(--gold);
+}
+
+/* Home Page Image */
+.img-fluid {
+  max-width: 100%;
+  height: 290px;
+  border-radius: 5px;
+  box-shadow: var(--smal-box-shadow);
+  margin-top: 3.3rem;
+}
+
+/* Log In, Sign Up forms */
+.form {
+  width: 80%;
+  margin: 5% auto;
+  box-shadow: var(--smal-box-shadow);
+  border-radius: 5px;
+}
+
+.form-control {
+  border: var(--border);
+  box-shadow: var(--smal-box-shadow);
+  margin-left: 10%;
+  width: 80%;
+}
+
+.container-scroll {
+  height: 100vh;
+}
+
+.text-gold {
+  color: var(--dark-yellow);
+  font-weight: 600;
+}
+
+.text-gold:hover {
+  color: var(--slate-green);
+}
+
+.form-check .form-check-input {
+  float: none;
+  border: var(--border);
+}
+/* Check if ok for screenreaders */
+.form-text {
+  display: none;
+}
+
+/* Carousel Images*/
+.custom-carousel-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  max-height: 550px;
+  border-radius: 5px;
+}
+
+.text-green {
+  color: var(--slate-green);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.transparent-box {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: var(--border);
+  background-color: rgba(
+    246,
+    245,
+    241,
+    0.5
+  ); /* Semi-transparent white background */
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Home page manage account Cards */
+
+.text-green-p {
+  color: var(--slate-green);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.manage-card {
+  border: 1px solid var(--dark-yellow);
+  background-color: #f9f9f9;
+  box-shadow: var(--smal-box-shadow);
+}
+
+/* Contact Section */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid var(--dark-yellow); 
+  box-shadow: var(--smal-box-shadow);
+  border-radius: 5px;
+}
+
+.contact-info .icon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.contact-info .details {
+  flex-grow: 1;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--slate-green);
+  border-top: var(--border);
+}
+
+.social-icon {
+  height: 2rem;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: var(--cloudy-white);
+}
+
+.copyright {
+  color: var(--cloudy-white);
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 
