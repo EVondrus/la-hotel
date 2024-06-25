@@ -1,7 +1,19 @@
 from django.contrib import admin
+from .models import Room, RoomCategory
+from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
-from .models import Room, RoomCategory
+@admin.register(RoomCategory)
+class RoomCategoryAdmin(SummernoteModelAdmin):
+    list_display = ['category', 'price', 'capacity']
+    search_fields = ['category']
+    summernote_fields = ('description',)
 
-admin.site.register(Room)
-admin.site.register(RoomCategory)
+@admin.register(Room)
+class RoomAdmin(admin.ModelAdmin):
+    list_display = ['room_number', 'category', 'status']
+    search_fields = ['room_number']
+    list_filter = ['category', 'status']
+
+
+
