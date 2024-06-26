@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+<!-- Prettier Ignore-->
+{% load static %}
+<!-- Prettier Ignore-->
+{% block title %}Rooms{% endblock %}
+<!-- Prettier Ignore-->
+{% block content %}
+
+<h1 class="text-center p-2 d-block mt-5">Rooms</h1>
+<div
+  class="container d-flex flex-row flex-wrap justify-content-center room-categories"
+>
+  {% for category in categories %}
+  <div class="card m-3" style="width: 18rem">
+    <img
+      src="{{category.image}}"
+      class="card-img-top"
+      alt="{{category.image_alt}}"
+    />
+    <div class="card-body">
+      <h2 class="card-title">{{ category.category|lower|capfirst }}</h2>
+      <p class="card-text">
+        {{ category.beds|lower|capfirst }} Bed, {{ category.capacity }} Guests
+        <br />
+        {{ category.price }}
+        <br />
+        {{category.description|truncatewords:20|safe}}
+      </p>
+
+      <div class="mt-auto d-flex justify-content-center">
+        <a href="{% url 'rooms:room_detail' category.id %}" class="btn btn-gold"
+          >View Room</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
