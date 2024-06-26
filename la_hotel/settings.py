@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'home',
     'rooms',
     'booking',
+    'booking.booking_functions',
 
     # Other
     'crispy_forms',
