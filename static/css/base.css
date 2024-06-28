@@ -122,6 +122,7 @@ a.btn-book {
 .btn-gold {
   background-color: var(--dark-yellow);
   width: 13rem;
+  color: var(--cloudy-white);
 }
 
 a.btn:hover,
@@ -130,13 +131,17 @@ a.btn-book:hover {
   background-color: var(--gold);
 }
 
-/* Log In, Sign Up forms */
+/* Log In, Sign Up, Booking forms */
 
 .form {
   width: 80%;
   margin: 5% auto;
   box-shadow: var(--smal-box-shadow);
   border-radius: 5px;
+}
+
+.form-label {
+  font-size: 1.2rem;
 }
 
 .form-control {
@@ -251,7 +256,7 @@ a.btn-book:hover {
   justify-content: center;
   padding: 20px;
   background-color: #f9f9f9;
-  border: 1px solid var(--dark-yellow); 
+  border: 1px solid var(--dark-yellow);
   box-shadow: var(--smal-box-shadow);
   border-radius: 5px;
 }
@@ -264,7 +269,6 @@ a.btn-book:hover {
 .contact-info .details {
   flex-grow: 1;
 }
-
 
 /* Footer */
 footer {
@@ -284,4 +288,3 @@ footer {
   font-size: 0.8rem;
   margin-top: 0.8rem;
 }
-

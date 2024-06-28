@@ -3,7 +3,7 @@
 <header>
   <!-- Check page to activate the active class -->
   {% with request.resolver_match.url_name as url_name %}
-  <p>Debug URL Name: {{ url_name }}</p>
+  <!-- <p>Debug URL Name: {{ url_name }}</p> -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- Logo -->
@@ -45,8 +45,8 @@
           >
             <a class="nav-link" href="{% url 'rooms:roomcategory' %}">Rooms</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Book</a>
+          <li class="nav-item {% if url_name == 'add_booking' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'booking:add_booking' %}">Book</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
