@@ -62,6 +62,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'djmoney',
+    'cloudinary',
+    'cloudinary_storage',
+
 ]
 
 SITE_ID = 1
@@ -189,9 +192,14 @@ LOGOUT_REDIRECT_URL = '/'
 STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# Cloudinary settings
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
