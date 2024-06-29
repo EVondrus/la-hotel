@@ -76,6 +76,24 @@ a.nav-link:hover {
   color: var(--cloudy-white) !important;
 }
 
+.fa-user {
+  color: var(--cloudy-white);
+  font-size: 1.2rem;
+}
+
+.fa-user:hover {
+  color: var(--dark-yellow);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  color: var(--cloudy-white);
+
+}
+
 .dropdown-menu-right {
   right: 0;
   left: auto;
@@ -141,7 +159,7 @@ a.btn-book:hover {
 }
 
 .form-label {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .form-control {
