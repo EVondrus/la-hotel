@@ -11,9 +11,9 @@ class RoomCategoryAdmin(SummernoteModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ['room_number', 'category', 'status']
+    list_display = ['room_number', 'avaliable', 'category']
     search_fields = ['room_number']
-    list_filter = ['category', 'status']
+    list_filter = ['room_number', 'category', 'avaliable']
 
 
 
