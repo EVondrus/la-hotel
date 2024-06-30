@@ -22,10 +22,6 @@ class BookingAdmin(admin.ModelAdmin):
         ('Booking Information', {
             'fields': ('user', 'check_in', 'check_out', 'no_of_guests', 'total_price')
         }),
-        ('Timestamps', {
-            'fields': ('created', 'updated'),
-            'classes': ('collapse',),
-        }),
     )
     ordering = ('-check_in',)
 
