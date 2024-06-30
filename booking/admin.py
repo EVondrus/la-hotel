@@ -12,9 +12,9 @@ class RoomInline(admin.TabularInline):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('booking_Id', 'user','check_in', 'check_out', 'total_price')
+    list_display = ('booking_id', 'user','check_in', 'check_out', 'total_price')
     list_filter = ('check_in', 'check_out', 'user__email')
-    search_fields = ('booking_Id', 'user__username', 'user__email') 
+    search_fields = ('booking_id', 'user__username', 'user__email') 
     inlines = [RoomInline]
     date_hierarchy = 'check_in'
     autocomplete_fields = ['user']
