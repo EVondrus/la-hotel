@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -63,7 +64,6 @@ INSTALLED_APPS = [
     'django_summernote',
     'djmoney',
     'cloudinary',
-    'cloudinary_storage',
 
 ]
 
