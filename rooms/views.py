@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import RoomCategory, Room
-from booking.forms import AvailabilityForm
+# from booking.forms import AvailabilityForm
+
 
 class RoomCategoryList(ListView):
     """List view for room categories."""
@@ -14,5 +15,3 @@ class RoomDetailView(DetailView):
     model = Room
     template_name = 'rooms/room_detail.html'
     context_object_name = 'room'
-
-
