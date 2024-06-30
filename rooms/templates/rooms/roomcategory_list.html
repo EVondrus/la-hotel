@@ -12,11 +12,21 @@
 >
   {% for category in categories %}
   <div class="card m-3 category-card" style="width: 18rem">
+    <!-- Check if the category image exists -->
+    {% if category.image %}
     <img
-      src="{{category.image}}"
+      src="{{ category.image.url }}"
       class="card-img-top"
-      alt="{{category.image_alt}}"
+      alt="{{ category.image_alt }}"
     />
+    {% else %}
+    <!-- Display the default image if no image was uploaded -->
+    <img
+      src="{% static 'images/default-room.webp' %}"
+      class="card-img-top"
+      alt="Default Room Image"
+    />
+    {% endif %}
     <div class="card-body">
       <h2 class="card-title">{{ category.category|lower|capfirst }}</h2>
       <p class="card-text">
@@ -24,7 +34,7 @@
         <br />
         {{ category.price }}
         <br />
-        {{category.description|truncatewords:20|safe}}
+        {{category.description|truncatewords:30|safe}}
       </p>
 
       <div class="mt-auto d-flex justify-content-center">
