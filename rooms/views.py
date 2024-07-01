@@ -11,7 +11,7 @@ class RoomCategoryList(ListView):
     context_object_name = 'categories'
 
 
-class RoomDetailView(DetailView):
-    model = Room
-    template_name = 'rooms/room_detail.html'
-    context_object_name = 'room'
+class RoomCategoryDetail(DetailView):
+    model = RoomCategory
+    template_name = 'rooms/roomcategory_detail.html'
+    context_object_name = 'category'
