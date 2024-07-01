@@ -49,10 +49,26 @@
 
   <!--Prettier Ignore-->
   <body>
+    <!-- Navbar -->
     {% include 'includes/header.html' %}
 
-    <main>{% block content %} {% endblock %}</main>
+    <main>
+      <!-- Messages block -->
+      {% if messages %}
+      <div class="message-container">
+          {% for message in messages %}
+          <div class="{{ message.tags }}">
+              {{ message }}
+          </div>
+          {% endfor %}
+      </div>
+      {% endif %}
 
+    <!-- Content block -->
+      {% block content %} {% endblock %}
+    </main>
+
+    <!-- Footer -->
     {% include 'includes/footer.html' %}
 
     <!-- Bootstrap JS -->
