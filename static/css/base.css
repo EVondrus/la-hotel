@@ -288,6 +288,17 @@ a.btn-book:hover {
   flex-grow: 1;
 }
 
+/* Room Category Detail Page */
+.back-icon {
+  font-size: 2rem;
+  color: var(--dark-yellow);
+}
+
+.back-icon:hover {
+  color: var(--gold);
+  cursor: pointer;
+}
+
 /* Footer */
 footer {
   background-color: var(--slate-green);
