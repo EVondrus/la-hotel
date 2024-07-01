@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Room Detail - {{ category.category }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <a href="{% url 'rooms:roomcategory' %}" class="mb-4"><i class="fa-solid fa-arrow-left icon back-icon"></i></a>
+    <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <img src="{{ category.image.url }}" alt="{{ category.image_alt }}" class="img-fluid">
+        </div>
+        <div class="col-lg-6 col-md-12 mt-4">
+            <h1 class="text-center">{{ category.category|lower|capfirst }}</h1>
+            <p class="text-center">{{ category.beds|lower|capfirst }} Bed, {{ category.capacity }} Guests</p>
+            <p class="text-center">{{ category.price }}</p>
+            <hr>
+            <p class="text-center my-4">{{ category.description|safe }}</p>
+            <div class="text-center">
+                <a href="{% url 'booking:add_booking' %}" class="btn btn-book">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
