@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'home',
     'rooms',
     'booking',
+    'guests',
     'booking.booking_functions',
 
     # Other
