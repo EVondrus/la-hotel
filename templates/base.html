@@ -55,21 +55,33 @@
     <main>
       <!-- Messages block -->
       {% if messages %}
-      <div class="message-container">
-          {% for message in messages %}
-          <div class="{{ message.tags }}">
-              {{ message }}
-          </div>
-          {% endfor %}
+      <div class="message-container" id="messages">
+        {% for message in messages %}
+        <div class="custom-{{ message.tags }} fade show" role="alert">
+          {{ message }}
+        </div>
+        {% endfor %}
       </div>
       {% endif %}
 
-    <!-- Content block -->
+      <!-- Content block -->
       {% block content %} {% endblock %}
     </main>
 
     <!-- Footer -->
     {% include 'includes/footer.html' %}
+
+    <!-- Javascript for message display -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          var messages = document.getElementById("messages");
+          if (messages) {
+            messages.style.display = "none";
+          }
+        }, 5000); // 5000ms = 5 seconds
+      });
+    </script>
 
     <!-- Bootstrap JS -->
     <script

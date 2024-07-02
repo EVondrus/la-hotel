@@ -281,7 +281,7 @@ a.btn-book:hover,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adds a stronger shadow for pop-out effect */
 }
 
-/* Contact Section */
+/* Contact Section on Home Page */
 
 .contact-container {
   display: flex;
@@ -341,4 +341,36 @@ footer {
   color: var(--cloudy-white);
   font-size: 0.8rem;
   margin-top: 0.8rem;
+}
+
+/* Suceess and Error Messages */
+
+.message-container {
+  position: fixed;
+  top: 5.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050; /* Ensure it's above other elements */
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 15px; 
+}
+
+.custom-success {
+  background-color: var(--dark-green);
+  color: var(--cloudy-white);
+  border: 1px solid var(--slate-green);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.custom-error {
+  background-color: var(--dark-red); 
+  color: var(--cloudy-white);
+  border: 1px solid #4f0409;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
 }
