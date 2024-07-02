@@ -13,14 +13,14 @@
         <h1 class="display-4">Landskrona Hotel</h1>
         <p class="lead">Welcome to our luxorious space right by the ocean!</p>
         <p>Book a room or Sign in to view your reservations</p>
-        <a class="btn btn-md btn-book mx-4" href="#" role="button">Book Now</a>
-        <a class="btn btn-md mx-1" href="#" role="button">Sign In</a>
+        <a class="btn btn-md btn-book mx-4" href="{% url 'booking:add_booking' %}" role="button">Book Now</a>
+        <a class="btn btn-md mx-1" href="/accounts/login/" role="button">Sign In</a>
       </div>
     </div>
   </div>
 </div>
 <!-- Intro Section-->
-<div class="container d-flex flex-column mt-5 py-3">
+<div class="container d-flex flex-column mt-3">
   <div class="row">
     <div class="col-md-6 d-none d-md-block">
       <img src="{% static 'images/la-home1.webp' %}" alt="Image of Landskrona waterfront from a drone view" class="img-fluid cover-img"/>
@@ -34,7 +34,7 @@
         Our hotel is located in the heart of Landskrona, a charming town with a
         rich history and vibrant culture.
       </p>
-      <a class="btn btn-gold w-50" href="#" role="button">Find Your Stay</a>
+      <a class="btn btn-gold mt-4" href="{% url 'rooms:roomcategory' %}" role="button">Find Your Stay</a>
     </div>
   </div>
 </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="row my-4">
             <div class="col text-center">
-                <button class="btn btn-gold">View Profile and Reservations</button>
+                <button class="btn btn-gold">View Your Reservations</button>
             </div>
         </div>
     </div>
