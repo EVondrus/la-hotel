@@ -129,7 +129,6 @@ a.nav-link:hover {
 a.btn {
   background-color: var(--dark-yellow);
   color: var(--cloudy-white);
-  padding: 6px 25px;
   box-shadow: var(--smal-box-shadow);
 }
 
@@ -137,15 +136,37 @@ a.btn-book {
   background-color: var(--slate-green);
 }
 
+a.btn-red {
+  background-color: var(--dark-red);
+  color: var(--cloudy-white);
+
+}
+
+.btn-red {
+  background-color: var(--dark-red);
+  color: var(--cloudy-white);
+  width: 13rem;
+  box-shadow: var(--smal-box-shadow);
+}
+
+.btn-book {
+  background-color: var(--slate-green);
+  color: var(--cloudy-white);
+  box-shadow: var(--smal-box-shadow);
+}
+
 .btn-gold {
   background-color: var(--dark-yellow);
   width: 13rem;
   color: var(--cloudy-white);
+  box-shadow: var(--smal-box-shadow);
 }
 
 a.btn:hover,
 .btn-gold:hover,
-a.btn-book:hover {
+a.btn-book:hover,
+.btn-book:hover,
+.btn-red:hover {
   background-color: var(--gold);
 }
 
@@ -298,6 +319,10 @@ a.btn-book:hover {
   color: var(--gold);
   cursor: pointer;
 }
+
+/* Booking Form */
+
+
 
 /* Footer */
 footer {

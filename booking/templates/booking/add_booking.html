@@ -1,15 +1,16 @@
 {% extends "base.html" %} 
 <!--Prettier ignore-->
-{% block title %}Add Booking{% endblock %} 
-<!-- Add Booking Form -->
+{% block title %}Booking{% endblock %} 
+
 {% block content %}
 <div class="container">
   <form method="POST" class="p-2 form">
-    <h1 class="text-center">Booking</h1>
+    <h1 class="text-center">Book Your Stay</h1>
     {% csrf_token %} 
     {{ form|crispy}}
     <div class="text-center">
-      <button type="submit" class="btn btn-gold">Book</button>
+      <button type="submit" class="btn btn-book mx-3">Book</button>
+      <a href="{% url 'rooms:roomcategory' %}" class="btn btn-red my-4">Cancel</a>
     </div>
   </form>
 </div>
