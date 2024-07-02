@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Guest Profile - {{profile.user.username}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-5">Profile</h1>
+    <div class="profile px-4">
+        <div class="row">
+            <div class="col-6 mt-5 d-none d-md-block">
+                <div class="profile-img">
+                    <img src="{% static 'images/la-hotel-logo.webp' %}" alt="Landskrona Hotel logo" class="profile-img">
+                </div>
+            </div>
+            <div class="col-6 my-4">
+                <div class="profile-info">
+                    <h2>{{profile.user.username}}</h2>
+                    <p><strong>Full Name:</strong> {{profile.first_name}} {{profile.last_name}}</p>
+                    <p><strong>Date of Birth:</strong> {{profile.date_of_birth}}</p>
+                    <p><strong>Joined:</strong> {{profile.user.date_joined|date:'d M Y'}}</p>
+                    <br>
+                    <br>
+                    <p><strong>Email:</strong> {{profile.user.email}}</p>
+                    <p><strong>Phone:</strong> {{profile.phone_number}}</p>
+                    <p><strong>Country:</strong> {{profile.country}}</p>
+                    <p><strong>City:</strong> {{profile.city}}</p>
+                    <p><strong>Address:</strong> {{profile.address}}</p>
+                    <p><strong>Postal Code:</strong> {{profile.postal_code}}</p>
+                </div>
+                
+                {% if request.user == profile.user %}
+                <button class="btn btn-gold">Edit Profile</button>
+                <button class="btn btn-red mt-4 mt-lg-0">Delete Profile</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+{% endblock %}
