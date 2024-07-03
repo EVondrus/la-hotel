@@ -277,8 +277,8 @@ a.btn-book:hover,
 }
 
 .category-card:hover {
-  transform: scale(1); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adds a stronger shadow for pop-out effect */
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adds a stronger shadow for pop-out effect */
 }
 
 /* Contact Section on Home Page */
@@ -322,13 +322,11 @@ a.btn-book:hover,
 
 /* Booking Form */
 
-
 /* Profile Page */
 .profile-logo-img img {
   border-radius: 5px;
   box-shadow: var(--smal-box-shadow);
 }
-
 
 /* Footer */
 footer {
