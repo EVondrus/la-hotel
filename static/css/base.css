@@ -273,11 +273,11 @@ a.btn-book:hover,
 }
 
 .category-card {
-  transition: transform 0.4s ease, box-shadow 0.3s ease; /* Adjust the time as needed */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
 .category-card:hover {
-  transform: scale(1.1); /* Makes the card 5% bigger */
+  transform: scale(1); 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adds a stronger shadow for pop-out effect */
 }
 
@@ -322,6 +322,12 @@ a.btn-book:hover,
 
 /* Booking Form */
 
+
+/* Profile Page */
+.profile-logo-img img {
+  border-radius: 5px;
+  box-shadow: var(--smal-box-shadow);
+}
 
 
 /* Footer */
