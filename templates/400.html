@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Error 400 - Bad Request
+{% endblock %}
+
+{% block content %}
+
+<section id="error-400">
+
+    <div class="container text-center">
+        <h1 class="my-5">Error 400 - Bad Request</h1>
+        <p>We're sorry, but something went wrong on our end!</p>
+        <p><strong>What you can do:</strong></p>
+        <ul>
+            <li>Double-check the URL for any typos or mistakes.</li>
+            <li>Make sure all special characters in the URL are properly encoded.</li>
+            <li>Try refreshing the page.</li>
+        </ul>
+        <a href="{% url 'home' %}" role="button" class="btn btn-gold mt-4">Home</a>
+    </div>
+
+</section>
+
+{% endblock %}

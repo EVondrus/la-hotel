@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Error 403 - Forbidden
+{% endblock %}
+
+{% block content %}
+
+<section id="error-403">
+
+    <div class="container text-center">
+        <h1 class="my-5">403 - Access Denied</h1>
+        <p>Access to this resource is restricted. To view the content, please log in or return back to the home page.
+        </p>
+        <div class="row justify-content-center mt-4">
+            <div class="col-auto d-flex flex-column flex-sm-row align-items-center">
+                <a href="/accounts/login/" role="button" class="btn btn-gold mb-2 mx-2">Login</a>
+            </div>
+            <div class="col-auto d-flex flex-column flex-sm-row align-items-center">
+                <a href="{% url 'home' %}" role="button" class="btn btn-gold mb-2 mx-2">Home</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
