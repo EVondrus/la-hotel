@@ -13,8 +13,6 @@ from .forms import ProfileForm
 
 
 # Create your views here.
-
-
 class Profiles(TemplateView):
     """  
     Displays guest profile information
@@ -40,9 +38,10 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         """Handle successful form submission."""
-        form.save()
+
+        self.success_url = f'/profiles/profile/{self.kwargs["pk"]}/'
         messages.success(self.request, 'Your profile was successfully updated.')
-        return redirect('guests:profile', pk=self.kwargs['pk'])
+        return super().form_valid(form)
 
     def test_func(self):
         """Ensure user can only edit their own profile."""
