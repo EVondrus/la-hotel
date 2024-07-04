@@ -16,7 +16,7 @@
             <div class="contact-info">
                 {% if request.user == profile.user %}
                 <button id="myBtn" class="btn btn-gold mx-2">Edit Profile</button>
-                <button class="btn btn-red mx-2">Delete Profile</button>
+                <a href="{% url 'delete_profile' pk=profile.pk %}" class="btn btn-red mx-2">Delete Profile</a>
                 {% endif %}
             </div>
         </div>
@@ -54,7 +54,7 @@
         <span class="close fs-5">&times;</span>
         <form
             method="POST"
-            action="{% url 'guests:edit_profile' request.user.id %}"
+            action="{% url 'edit_profile' request.user.id %}"
             class="mb-2 p-2"
         >
             <h2 class="text-center">Edit Profile</h2>
