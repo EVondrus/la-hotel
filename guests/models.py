@@ -9,8 +9,8 @@ from django.dispatch import receiver
 # Create your models here.
 class Profile(models.Model):
     """ Guest profile model """
-    user = models.ForeignKey(
-        User, related_name="profile", on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(
@@ -24,12 +24,3 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user.username)
-
-
-# Signal to create a profile when a new user is created
-# Code taken from: https://www.youtube.com/watch?v=dGnRsNH81Ik&t=6s
-@receiver(post_save, sender=User)
-def create_user_profile(instance, created, **kwargs):
-    """ Create or update a user profile """
-    if created:
-        Profile.objects.create(user=instance)
