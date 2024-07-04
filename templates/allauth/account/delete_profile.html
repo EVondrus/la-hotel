@@ -1,0 +1,31 @@
+{% extends "account/base.html" %} 
+{% load static %}
+{% load allauth i18n %}
+
+
+{% block title %}
+    {% trans "Delete Profile" %}
+{% endblock title %}
+
+
+{% block content %}
+    <div class="container text-center mt-5">
+        <h1>{% trans "Delete Profile" %}</h1>
+
+        <p>{% trans 'Are you sure you want to delete your <strong>Profile</strong> and related <strong>Bookings?</strong>' %}</p>
+
+        <form method="post" action="{% url 'delete_profile' pk=profile.pk %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+            <button type="submit" class="btn btn-red my-4">{% trans 'Delete' %}</button>
+            <a href="{% url 'home' %}" class="btn btn-gold">Keep it</a>
+        </form>
+    </div>
+    <div class="container text-center mt-5">
+        <h2>It was a pleasure to have you here!</h2>
+        <p>We hope to see you back soon.</p>
+    </div>
+
+{% endblock %}
