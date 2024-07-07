@@ -16,14 +16,12 @@ from .forms import CustomSignupForm
 # Create your views here.
 class CustomSignup(SignupView):
     """ Custom Signup view """
-    print("CustomSignup")
     template_name = 'allauth/account/signup.html'
     form_class = CustomSignupForm
     success_url = reverse_lazy('account_login')
 
     def form_valid(self, form):
         """Handle successful form submission."""
-        print("Form valid")
         messages.success(
             self.request, 'Your account has been created. You can now log in.'
         )
