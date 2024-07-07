@@ -65,4 +65,4 @@ class Room(models.Model):
         unique_together = (('room_number', 'category'),)
 
     def __str__(self):
-        return f"{self.room_number} - {self.category} - {self.status}"
+        return f"{self.room_number} - {self.category} - {self.avaliable}"
