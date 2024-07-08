@@ -64,7 +64,7 @@
             {% if user.is_authenticated %}
             <div class="dropdown-menu dropdown-menu-end">
               <a class="dropdown-item" href="{% url 'profile' pk=request.user.pk %}">Profile</a>
-              <a class="dropdown-item" href="#">Reservations</a>
+              <a class="dropdown-item" href=" {% url 'booking:booking_list' %}">Reservations</a>
               <a
                 class="dropdown-item {% if url_name == 'accounts_logout' %}active{%endif%}"
                 href="/accounts/logout/"
