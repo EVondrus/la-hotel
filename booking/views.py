@@ -161,3 +161,32 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_invalid(form)
 
 
+class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """ View for deleting a booking """
+    model = Booking
+    success_url = reverse_lazy('booking:booking_list')
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+    def delete(self, request, *args, **kwargs):
+        """ Perform delete operation """
+        booking = self.get_object()
+
+        # Calculate the deadline for deletion (15:00 on the day before check-in)
+        check_in_deadline = booking.check_in.replace(
+            hour=15, minute=0, second=0) - timedelta(days=1)
+
+        # Check if the current time is beyond the deletion deadline
+        if timezone.now() > check_in_deadline:
+            messages.error(
+                self.request,
+                'Bookings cannot be deleted within 24 hours before check-in. \
+                    Please contact us for assistance.'
+            )
+            return HttpResponseRedirect(self.success_url)
+
+        # Proceed with deletion if within the allowed time
+        return super().delete(request, *args, **kwargs)
+
+
