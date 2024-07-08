@@ -91,4 +91,10 @@ class AddBooking(LoginRequiredMixin, CreateView):
 #             context['booking'] = get_object_or_404(Booking, id=booking_id)
 #         return context
 
+class BookingList(LoginRequiredMixin, ListView):
+    """ View for listing all bookings made by the user. """
+    template_name = 'booking/booking_list.html'
+    context_object_name = 'bookings'
+    model = Booking
+
 
