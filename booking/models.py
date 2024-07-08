@@ -29,29 +29,18 @@ class Booking(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.user} - {self.rooms} -\
-            {self.check_in} - {self.check_out} - {self.total_price}'
+        return f"Booking from {self.check_in} to {self.check_out} - Total: {self.total_price}"
 
     class Meta:
         ordering = ['-check_in']
 
-    def save(self, *args, **kwargs):
-        # Ensure check-out date is after check-in date
-        if self.check_out <= self.check_in:
+    @staticmethod
+    def calculate_total_price(check_in, check_out, room_category):
+        if check_out <= check_in:
             raise ValueError("Check-out date must be after check-in date")
-
-        # Calculate total nights
-        total_nights = (self.check_out - self.check_in).days
-
-        # All rooms in the same category have the same price
-        room_category = self.rooms.first().category
-
-        # Calculate total price
-        # price is stored in the RoomCategory model
-        price_per_night = room_category.price.amount 
-        self.total_price = price_per_night * total_nights
-
-        super(Booking, self).save(*args, **kwargs)
+        total_nights = (check_out - check_in).days
+        price_per_night = room_category.price.amount
+        return price_per_night * total_nights
 
 
     @staticmethod
@@ -73,6 +62,19 @@ class Booking(models.Model):
                 available_rooms.append(room)
 
         return available_rooms
+
+        def save(self, *args, **kwargs):
+        
+            if self.check_out <= self.check_in:
+                raise ValueError("Check-out date must be after check-in date")
+
+            # All rooms in the same category have the same price
+            room_category = self.rooms.first().category
+
+            # Calculate total price using the static method
+            self.total_price = self.calculate_total_price(self.check_in, self.check_out, room_category)
+
+            super().save(*args, **kwargs)
 
 
 @receiver(post_save, sender=Booking)
