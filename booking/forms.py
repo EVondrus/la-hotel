@@ -1,6 +1,9 @@
 from django import forms
+from django.forms import ModelForm
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+from djmoney.forms.fields import MoneyField
+
 from .models import Booking
 from rooms.models import RoomCategory, Room
 
@@ -19,16 +22,19 @@ class BookingForm(forms.ModelForm):
     )
     room_category = forms.ModelChoiceField(
         queryset=RoomCategory.objects.all(), required=True,
-        widget=forms.Select(attrs={'class': 'form-control'}))
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
     no_of_guests = forms.IntegerField(
         min_value=1, required=True,
-        widget=forms.NumberInput(attrs={'class': 'form-control'}))
-    total_price = forms.DecimalField(
+        widget=forms.NumberInput(attrs={'class': 'form-control'})
+    )
+    total_price = MoneyField(
         max_digits=10,
         decimal_places=2,
         required=False,
         widget=forms.NumberInput(attrs={
-            'class': 'form-control', 'readonly': 'readonly'}))
+            'class': 'form-control', 'readonly': 'readonly'})
+    )
 
     class Meta:
         model = Booking
@@ -56,6 +62,9 @@ class BookingForm(forms.ModelForm):
             if check_out < check_in:
                 raise ValidationError(
                     'Check out date cannot be before check in date')
-
+        # Validate number of guests
         if no_of_guests < 1:
             raise ValidationError('Number of guests must be greater than 0')
+        
+        if no_of_guests > data['room_category'].capacity:
+            raise ValidationError('Number of guests exceeds maximum allowed')
