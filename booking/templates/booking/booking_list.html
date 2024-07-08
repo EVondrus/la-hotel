@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+<!-- Prettier Ignore-->
+{% load static %}
+<!-- Prettier Ignore-->
+{% block title %}Reservations{% endblock %}
+<!-- Prettier Ignore-->
+
+{% block content %}
+<h1 class="text-center my-5">Your Reservations</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center room-categories mb-4">
+    {% if bookings %}
+    {% for booking in bookings %}
+    <div class="card m-3 category-card" style="width: 22rem">
+        <div class="card-body">
+        <h2 class="card-title">{{ booking.rooms }}</h2>
+        <p class="card-text">
+            <strong>Booking Id:</strong> {{ booking.pk }}
+            <br />
+            <strong>Check-in:</strong> {{ booking.check_in }}
+            <br />
+            <strong>Check-in:</strong> {{ booking.check_out }}
+            <br /> 
+            <strong>Guests:</strong> {{ booking.no_of_guests }}
+            <br />
+            <strong>Total price:</strong> {{ booking.total_price }}
+        </p>
+
+        <div class="mt-auto d-flex justify-content-center">
+            <a href=" {% url 'booking:edit_booking' booking.pk %}" class="btn btn-gold mx-2">Edit Booking</a>
+            <a href="{% url 'booking:delete_booking' booking.pk %}" class="btn btn-red mx-2">Cancel Booking</a>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="container">
+        <p class="text-center">You don't have any reservations.</p>
+        <p class="text-center">Check out our rooms and book your stay <a href="{% url 'rooms:roomcategory' %}">here</a>.</p>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+
+
