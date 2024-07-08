@@ -1,5 +1,6 @@
 from django.views.generic import(
     TemplateView,
+    DetailView,
     CreateView,
     ListView,
     UpdateView,
@@ -14,7 +15,7 @@ from django.contrib import messages
 
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.utils import timezone
 from datetime import timedelta, datetime
 
@@ -32,33 +33,51 @@ class AddBooking(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('booking:booking_success')
 
     def form_valid(self, form):
-        """ Process the form data """
+    # Process the form data
         form.instance.user = self.request.user
-        room_category = form.cleaned_data['room_category']
         check_in = form.cleaned_data['check_in']
         check_out = form.cleaned_data['check_out']
-
-        # Check if the selected room is available for the selected dates
-        available_rooms = Booking.get_available_rooms(
-            room_category,
-            check_in, check_out
+        no_of_guests = form.cleaned_data['no_of_guests']
+        room_category = form.cleaned_data['room_category']
+        
+        # total_price calculation and room selection logic 
+        # is defined in booking model
+        total_price = Booking.calculate_total_price(
+            check_in, check_out, room_category
         )
+        available_rooms = Booking.get_available_rooms(
+            room_category, check_in, check_out
+        )
+        
         if not available_rooms:
             messages.error(
-                self.request, 'This room is not available for the selected \
-                    dates. Please select another room or date.'
-            )
+                self.request, 'This room is not available for the \
+                    selected dates.')
             return self.form_invalid(form)
+
+        selected_room = available_rooms[0]
         
-        # Save the booking
-        booking = form.save()
-        booking.rooms.add(available_rooms.first())  # adding the first available room
-        self.request.session['booking_id'] = booking.id
+        # Create a new Booking instance and set its fields
+        booking = Booking(
+            user=self.request.user,
+            check_in=check_in,
+            check_out=check_out,
+            no_of_guests=no_of_guests,
+            total_price=total_price
+        )
+        
+        # Save the Booking instance to generate a booking_id
+        booking.save()
+        booking_id = booking.booking_id
+        success_url = reverse(
+            'booking:booking_success', kwargs={'pk': booking_id}
+        )
+        return HttpResponseRedirect(success_url)
+        
         messages.success(
             self.request, 'Your reservation has been confirmed. \
                 Thank you for booking with us!'
         )
-            
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -70,9 +89,10 @@ class AddBooking(LoginRequiredMixin, CreateView):
         return super().form_invalid(form)
 
 
-class BookingSuccess(TemplateView):
-    """ View for displaying a success message after booking """
+class BookingSuccess(LoginRequiredMixin, DetailView):
+    model = Booking
     template_name = 'booking/booking_success.html'
+    context_object_name = 'booking'
 
 
 class BookingList(LoginRequiredMixin, ListView):
