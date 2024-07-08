@@ -18,9 +18,11 @@
             class="btn btn-md btn-book mx-4"
             href="{% url 'booking:add_booking' %}"
             role="button"
-            >Book Now</a>
+            >Book Now</a
+          >
           <a class="btn btn-md mx-1" href="/accounts/login/" role="button"
-            >Sign In</a>
+            >Sign In</a
+          >
         </div>
       </div>
     </div>
@@ -101,7 +103,12 @@
       </div>
       <div class="row my-4">
         <div class="col text-center">
-          <button class="btn btn-gold">View Your Reservations</button>
+          <a
+            class="btn btn-gold mt-4"
+            href="{% url 'booking:booking_list' %}"
+            role="button"
+            >View Your Reservations
+          </a>
         </div>
       </div>
     </div>
