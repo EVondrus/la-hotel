@@ -51,10 +51,12 @@ class BookingForm(forms.ModelForm):
 
     def clean(self):
         """Custom booking form validation."""
-        data = super().clean()
-        check_in = data.get('check_in')
-        check_out = data.get('check_out')
-        no_of_guests = data.get('no_of_guests')
+        cleaned_data = super().clean()
+        check_in = cleaned_data.get('check_in')
+        check_out = cleaned_data.get('check_out')
+        no_of_guests = cleaned_data.get('no_of_guests')
+        room_category = cleaned_data.get('room_category')
+
         # Validate check in and check out dates
         if check_in and check_out:
             if check_in < timezone.now().date():
@@ -62,9 +64,19 @@ class BookingForm(forms.ModelForm):
             if check_out < check_in:
                 raise ValidationError(
                     'Check out date cannot be before check in date')
+
         # Validate number of guests
         if no_of_guests < 1:
             raise ValidationError('Number of guests must be greater than 0')
         
-        if no_of_guests > data['room_category'].capacity:
+        if no_of_guests > cleaned_data['room_category'].capacity:
             raise ValidationError('Number of guests exceeds maximum allowed')
+
+        # Calculate total price if check-in, check-out, and room category are valid
+        if check_in and check_out and room_category:
+            total_nights = (check_out - check_in).days
+            price_per_night = room_category.price.amount  # price is stored in the RoomCategory model
+            total_price = price_per_night * total_nights
+            cleaned_data['total_price'] = total_price
+
+        return cleaned_data
