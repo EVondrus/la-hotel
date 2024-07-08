@@ -1,0 +1,31 @@
+{% extends "account/base.html" %} 
+{% load static %}
+
+
+
+{% block title %}
+Cancel Reservation
+{% endblock title %}
+
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1>Cancel Reservation</h1>
+
+    <p>Are you sure you want to cancel your reservation with <strong>Booking ID: {{ booking.pk }}</strong> ?</p>
+
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <input type="submit" value="Cancel Booking" class="btn btn-red my-4">
+        <a href="{% url 'booking:booking_list' %}" class="btn btn-gold">Keep it</a>
+    </form>
+</div>
+<div class="container text-center mt-5">
+    <h2>We are sorry to see you go!</h2>
+    <p>We hope to have the pleasure of welcoming you another time.</p>
+    <p><strong>If there is anything we can do to assist you in the future, 
+        please don't hesitate to reach out.</strong></p>
+    <p class="m-2">Thank you for considering us for your stay!</p>
+</div>
+
+{% endblock %}
