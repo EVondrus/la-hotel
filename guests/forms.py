@@ -2,6 +2,9 @@ from django import forms
 from allauth.account.forms import SignupForm
 from .models import Profile
 from django.contrib import messages
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import User
 
 
 class CustomSignupForm(SignupForm):
@@ -20,6 +23,30 @@ class CustomSignupForm(SignupForm):
     def __init__(self, *args, **kwargs):
         """ Initialize the form """
         super().__init__(*args, **kwargs)
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if User.objects.filter(username=username).exists():
+            raise ValidationError(
+                _('Username already exists. \
+                    Please choose a different username.'))
+        return username
+
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        if User.objects.filter(email=email).exists():
+            raise ValidationError(
+                _('Email address already exists. \
+                    Please use a different email address.'))
+        return email
+
+    def clean_phone_number(self):
+        phone_number = self.cleaned_data['phone_number']
+        if Profile.objects.filter(phone_number=phone_number).exists():
+            raise ValidationError(
+                _('Phone number already exists in our records. \
+                    Please use a different phone number.'))
+        return phone_number
 
     def save(self, request):
         """ Save the user and profile"""
