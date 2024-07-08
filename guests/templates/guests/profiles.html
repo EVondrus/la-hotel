@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% load static %} {% block title %}Guest Profile -
 {{profile.user.username}}{% endblock %} {% block content %}
 
-<div class="container mt-5">
-    <h1 class="text-center mt-5">Profile</h1>
+<div class="container">
+    <h1 class="text-center my-5">Profile</h1>
     <div class="row contact-container">
         <div class="col-12 col-md-6 mb-4">
             <div class="contact-info justify-content-start">
@@ -51,7 +51,7 @@
 <div id="myModal" class="modal mt-5">
     <!-- Modal content -->
     <div class="modal-content container">
-        <span class="close fs-5">&times;</span>
+        <span class="close close-icon">&times;</span>
         <form
             method="POST"
             action="{% url 'edit_profile' request.user.id %}"

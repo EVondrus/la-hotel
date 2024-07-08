@@ -320,12 +320,21 @@ a.btn-book:hover,
   cursor: pointer;
 }
 
-/* Booking Form */
-
 /* Profile Page */
 .profile-logo-img img {
   border-radius: 5px;
   box-shadow: var(--smal-box-shadow);
+}
+
+/* Profile Modal */
+.close-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal-content {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 
 /* Footer */
