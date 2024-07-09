@@ -77,10 +77,10 @@ class Booking(models.Model):
             super().save(*args, **kwargs)
 
 
-@receiver(post_save, sender=Booking)
-def update_room_availability_on_save(sender, instance, created, **kwargs):
-    """Mark rooms as unavailable upon booking creation."""
-    if created:
-        for room in instance.rooms.all():
-            room.avaliable = False
-            room.save()
+    @receiver(post_save, sender='booking.Booking')
+    def update_room_availability_on_save(sender, instance, created, **kwargs):
+        """Mark rooms as unavailable upon booking creation."""
+        if created:
+            for room in instance.rooms.all():
+                room.avaliable = False
+                room.save()
