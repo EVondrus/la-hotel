@@ -28,25 +28,18 @@ class BookingForm(forms.ModelForm):
         min_value=1, required=True,
         widget=forms.NumberInput(attrs={'class': 'form-control'})
     )
-    total_price = MoneyField(
-        max_digits=10,
-        decimal_places=2,
-        required=False,
-        widget=forms.NumberInput(attrs={
-            'class': 'form-control', 'readonly': 'readonly'})
-    )
+    
 
     class Meta:
         model = Booking
         fields = [
             'check_in', 'check_out',
-            'room_category', 'no_of_guests', 'total_price']
+            'room_category', 'no_of_guests']
         labels = {
             'check_in': 'Check in',
             'check_out': 'Check out',
             'room_category': 'Room',
             'no_of_guests': 'Number of Guests',
-            'total_price': 'Total Price'
         }
 
     def clean(self):
