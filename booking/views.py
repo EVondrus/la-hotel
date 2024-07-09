@@ -33,6 +33,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('booking:booking_success')
 
     def form_valid(self, form):
+        """ Handle valid form submissions """
     # Process the form data
         form.instance.user = self.request.user
         check_in = form.cleaned_data['check_in']
@@ -55,30 +56,28 @@ class AddBooking(LoginRequiredMixin, CreateView):
                     selected dates.')
             return self.form_invalid(form)
 
-        selected_room = available_rooms[0]
-        
-        # Create a new Booking instance and set its fields
-        booking = Booking(
-            user=self.request.user,
-            check_in=check_in,
-            check_out=check_out,
-            no_of_guests=no_of_guests,
-            total_price=total_price
-        )
-        
-        # Save the Booking instance to generate a booking_id
-        booking.save()
-        booking_id = booking.booking_id
-        success_url = reverse(
-            'booking:booking_success', kwargs={'pk': booking_id}
-        )
-        return HttpResponseRedirect(success_url)
-        
-        messages.success(
-            self.request, 'Your reservation has been confirmed. \
-                Thank you for booking with us!'
-        )
-        return super().form_valid(form)
+        else: 
+            first_available_room = available_rooms[0] 
+            booking = Booking.objects.create( 
+                user=self.request.user,
+                check_in=check_in, check_out=check_out,
+                no_of_guests=no_of_guests,
+                total_price=total_price,
+            )
+            booking.rooms.add(first_available_room)
+            # Save the Booking instance to generate a booking_id
+            booking.save()
+            booking_id = booking.booking_id
+            success_url = reverse(
+                'booking:booking_success', kwargs={'pk': booking_id}
+            )
+            return HttpResponseRedirect(success_url)
+            
+            messages.success(
+                self.request, 'Your reservation has been confirmed. \
+                    Thank you for booking with us!'
+            )
+            return super().form_valid(form)
 
     def form_invalid(self, form):
         """Handle invalid form submissions"""
@@ -145,7 +144,7 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         old_room = booking.rooms.first() if booking.rooms.exists() else None  # Get the previously booked room, if any
 
         #adding the first available room
-        first_available_room = available_rooms.first()
+        first_available_room = available_rooms[0] if available_rooms else None
         booking.rooms.clear()  # Clear current rooms
         booking.rooms.add(first_available_room)  # Add new available room
 
