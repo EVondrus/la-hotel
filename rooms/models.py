@@ -33,16 +33,18 @@ class RoomCategory(models.Model):
         max_length=10000, help_text="Enter a description of the room",
         blank=True, null=True)
     image = ResizedImageField(
-        size=[400, None],
+        size=[400, 400],
+        crop=['middle', 'center'],
         quality=75,
         upload_to="room-categories/",
         force_format="WEBP",
         blank=False,
         null=False,
+        max_length=1000
     )
     image_alt = models.CharField(
         max_length=100, help_text="Enter a breif description of the image",
-        default="placeholder default room image",
+        default="Default room image",
         blank=False, null=False
     )
 
