@@ -29,7 +29,7 @@ if os.path.exists('env.py'):
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # If the variable DEVELOPMENT is in the environment, DEBUG is set to True
-DEBUG = 'DEBUG' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
