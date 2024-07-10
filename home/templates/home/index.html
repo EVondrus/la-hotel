@@ -6,22 +6,26 @@
 
 <!-- Hero Section -->
 {% block content %}
-<section id="hero">
+<section id="hero" aria-labelledby="hero-heading">
   <div class="jumbotron">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-4">Landskrona Hotel</h1>
-          <p class="lead">Welcome to our luxorious space right by the ocean!</p>
+          <p class="lead">Welcome to our luxurious space right by the ocean!</p>
           <p>Book a room or Sign in to view your reservations</p>
           <a
             class="btn btn-md btn-book mx-4"
             href="{% url 'booking:add_booking' %}"
             role="button"
+            aria-label="Book a room"
             >Book Now</a
           >
           {% if not user.is_authenticated %}
-          <a class="btn btn-md mx-1" href="/accounts/login/" role="button"
+          <a class="btn btn-md mx-1"
+            href="/accounts/login/"
+            role="button"
+            aria-label="Sign in to your account"
             >Sign In</a
           >
           {% endif %}
@@ -37,12 +41,12 @@
       <div class="col-md-6 d-none d-md-block">
         <img
           src="{% static 'images/la-home1.webp' %}"
-          alt="Image of Landskrona waterfront from a drone view"
+          alt="Landskrona waterfront from a drone view"
           class="img-fluid cover-img"
         />
       </div>
       <div class="col-md-6 mt-5 px-5">
-        <h4 class="mb-4">Nestled along the stunning coastline...</h4>
+        <h2 id="intro-heading" class="mb-4">Nestled along the stunning coastline...</h2>
         <p>
           Landskrona Hotel offers a luxurious retreat with breathtaking ocean
           views, elegant rooms, and top-notch amenities. <br />
@@ -55,6 +59,7 @@
           class="btn btn-gold mt-4"
           href="{% url 'rooms:roomcategory' %}"
           role="button"
+          aria-label="Find your stay"
           >Find Your Stay</a
         >
       </div>
@@ -79,23 +84,23 @@
         <div class="col-md-4 mb-4">
           <div class="card h-100 manage-card">
             <div class="card-body">
-              <h5 class="card-title">1. Review Details</h5>
-              <p class="card-text">View details of your booking.</p>
+              <h3 class="card-title text-h3">1. Review Details</h3>
+              <p class="card-text">View details of your reservation.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card h-100 manage-card">
             <div class="card-body">
-              <h5 class="card-title">2. Modify Reservations</h5>
-              <p class="card-text">Make changes to your booking.</p>
+              <h3 class="card-title text-h3">2. Modify Reservations</h3>
+              <p class="card-text">Make changes to your reservation.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card h-100 manage-card">
             <div class="card-body">
-              <h5 class="card-title">3. Cancel Bookings</h5>
+              <h3 class="card-title text-h3">3. Cancel Reservations</h3>
               <p class="card-text">
                 Cancel your existing booking up to 24h before check in.
               </p>
@@ -109,6 +114,7 @@
             class="btn btn-gold mt-4"
             href="{% url 'booking:booking_list' %}"
             role="button"
+            aria-label="View your reservations"
             >View Your Reservations
           </a>
         </div>
@@ -124,16 +130,16 @@
       <div class="col-12 col-md-6 mb-4">
         <div class="contact-info text-center">
           <div class="details">
-            <p><i class="fas fa-envelope icon text-green-p"></i>Email:</p>
-            <p><a href="mailto:lahotel@example.com">lahotel@example.com</a></p>
+            <p><i class="fas fa-envelope icon text-green-p" aria-hidden="true"></i>Email:</p>
+            <p><a href="mailto:lahotel@example.com">landskrona.hotel@gmail.com</a></p>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4">
         <div class="contact-info text-center">
           <div class="details">
-            <p><i class="fas fa-phone icon text-green-p"></i>Phone:</p>
-            <p>+12 34567890</p>
+            <p><i class="fas fa-phone icon text-green-p" aria-hidden="true"></i>Phone:</p>
+            <p>+46 34567890</p>
           </div>
         </div>
       </div>
@@ -141,9 +147,9 @@
         <div class="contact-info text-center">
           <div class="details">
             <p>
-              <i class="fas fa-map-marker-alt icon text-green-p"></i>Address:
+              <i class="fas fa-map-marker-alt icon text-green-p" aria-hidden="true"></i>Address:
             </p>
-            <p>123 Main Street, Landskrona, Sweden</p>
+            <p>123 Citadel Street, Landskrona, Sweden</p>
           </div>
         </div>
       </div>

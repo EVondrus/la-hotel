@@ -60,6 +60,7 @@ main {
 
 img.logo {
   width: 8rem;
+  height: auto;
 }
 
 a.nav-link {
@@ -263,6 +264,11 @@ a.btn-book:hover,
   color: var(--slate-green);
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.text-h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .manage-card,
