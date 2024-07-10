@@ -90,11 +90,6 @@ a.nav-link:hover {
   border: none;
 }
 
-.navbar-toggler-icon {
-  color: var(--cloudy-white);
-
-}
-
 .dropdown-menu-right {
   right: 0;
   left: auto;
