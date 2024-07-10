@@ -45,7 +45,6 @@ class Booking(models.Model):
 
     @staticmethod
     def get_available_rooms(room_category, check_in, check_out):
-        print(f"Checking availability for: Category={room_category}, Check-in={check_in}, Check-out={check_out}")
         available_rooms = []
         rooms_in_category = Room.objects.filter(
             category=room_category, avaliable=True

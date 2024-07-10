@@ -50,7 +50,6 @@ class CustomSignupForm(SignupForm):
 
     def save(self, request):
         """ Save the user and profile"""
-        print("Saving user")
         user = super(CustomSignupForm, self).save(request)
         Profile.objects.create(
             user=user,
