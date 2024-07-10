@@ -9,6 +9,7 @@ class RoomCategoryList(ListView):
     model = RoomCategory
     template_name = 'rooms/roomcategory_list.html'
     context_object_name = 'categories'
+    ordering = ['price']
 
 
 class RoomCategoryDetail(DetailView):

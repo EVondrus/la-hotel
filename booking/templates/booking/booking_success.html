@@ -4,31 +4,31 @@
 {% block content %}
 {% if booking %}
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center my-5">Booking Successful</h1>
-      <p class="text-center">Thank you for booking with us {{ booking.user.first_name }}!</p>
-      <p class="text-center">Your booking reference is <strong>{{ booking.pk }}</strong>.</p>
-      <p class="text-center">You booked a {{booking.rooms}} from {{ booking.check_in }} to {{ booking.check_out }} for {{ booking.no_of_guests }} guests.
-      <p class="text-center">Total price: {{booking.total_price}}</p>
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center my-5">Booking Successful</h1>
+			<p class="text-center">Thank you for booking with us {{ booking.user.first_name }}!</p>
+			<p class="text-center">Your booking reference is <strong>{{ booking.pk }}</strong>.</p>
+			<p class="text-center mt-4">You booked a <strong>{{ booking.rooms.first.category.category|lower|capfirst }}</strong> room from {{ booking.check_in }} to {{ booking.check_out }} for {{ booking.no_of_guests }} guests.
+			<p class="text-center">Total price: {{ booking.total_price }}</p>
 
-      <h2 class="text-center mt-4">We look forward to welcoming you to our hotel!</h2>
-      <p class="text-center"><strong>Check-in time is at 15:00 (3PM)</strong></p>
-      <p class="text-center">If you have any questions or need any support please contact us!</p>
-      <p class="text-center">We hope you'll enjoy your stay!</p>
-      <p class="text-center mt-4">You can view you booking <a href="{% url 'booking:booking_list' %}">here.</a></p>
-    </div>
-    <div class="text-center mt-4">
-        <a href="{% url 'home' %}" class="btn btn-gold">Return to Homepage</a>
-        <a href="{% url 'booking:add_booking' %}" class="btn btn-book my-4">Make Another Booking</a>
-    </div>
-  </div>
+			<h2 class="text-center mt-4">We look forward to welcoming you to our hotel!</h2>
+			<p class="text-center"><strong>Check-in time is at 15:00 (3PM)</strong></p>
+			<p class="text-center">If you have any questions or need any support please contact us!</p>
+			<p class="text-center">We hope you'll enjoy your stay!</p>
+			<p class="text-center mt-4">You can view you booking <a href="{% url 'booking:booking_list' %}">here.</a></p>
+		</div>
+		<div class="text-center mt-4">
+			<a href="{% url 'home' %}" class="btn btn-gold">Return to Homepage</a>
+			<a href="{% url 'booking:add_booking' %}" class="btn btn-book my-4">Make Another Booking</a>
+		</div>
+	</div>
 </div>
 {% else %}
-<div class="container">
-<h2 class="text-center my-5">Booking details not found!</h2>
-<p class="text-center">Please contact our support for assistance.</p>
-<a href="{% url 'home' %}" class="btn btn-gold mt-4">Return to Homepage</a>
+<div class="container text-center">
+	<h2 class="my-5">Booking details not found!</h2>
+	<p>Please contact our support for assistance.</p>
+	<a href="{% url 'home' %}" class="btn btn-gold mt-4">Return to Homepage</a>
 </div>
 {% endif %}
 {% endblock %}
