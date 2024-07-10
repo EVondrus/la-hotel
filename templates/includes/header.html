@@ -1,92 +1,91 @@
 {% load static %}
 
 <header>
-  <!-- Check page to activate the active class -->
-  {% with request.resolver_match.url_name as url_name %}
-  <!-- <p>Debug URL Name: {{ url_name }}</p> -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href=" {% url 'home' %}">
-        <img
-          src="{% static 'images/la-hotel-logo.webp' %}"
-          alt="La Hotel Logo"
-          class="logo"
-        />
-      </a>
-      <!-- Toggle for smaller screens-->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Nav items -->
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarNavDropdown"
-      >
-        <ul class="navbar-nav mb-2">
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'home'%}active{%endif%}"
-              aria-current="page"
-              href="{% url 'home' %}"
-              >Home</a
+<!-- Check page to activate the active class -->
+{% with request.resolver_match.url_name as url_name %}
+<!-- <p>Debug URL Name: {{ url_name }}</p> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" role="navigation">
+        <div class="container-fluid">
+            <!-- Logo -->
+			<a class="navbar-brand" href=" {% url 'home' %}">
+				<img
+				src="{% static 'images/la-hotel-logo.webp' %}"
+				alt="Landskrona Hotel Logo"
+				class="logo"
+				/>
+			</a>
+			<!-- Toggle for smaller screens-->
+			<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+			>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav items -->
+            <div
+				class="collapse navbar-collapse justify-content-end"
+				id="navbarNavDropdown"
             >
-          </li>
-          <li
-            class="nav-item {% if url_name == 'roomcategory' %}active{% endif %}"
-          >
-            <a class="nav-link" href="{% url 'rooms:roomcategory' %}">Rooms</a>
-          </li>
-          <li class="nav-item {% if url_name == 'add_booking' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'booking:add_booking' %}">Book</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="fa-solid fa-user"></i>
-            </a>
-            {% if user.is_authenticated %}
-            <div class="dropdown-menu dropdown-menu-end">
-              <a class="dropdown-item" href="{% url 'profile' pk=request.user.pk %}">Profile</a>
-              <a class="dropdown-item" href=" {% url 'booking:booking_list' %}">Reservations</a>
-              <a
-                class="dropdown-item {% if url_name == 'accounts_logout' %}active{%endif%}"
-                href="/accounts/logout/"
-                >Logout</a
-              >
-              {% else %}
-              <a
-                class="dropdown-item {% if url_name == 'accounts_signup' %}active{%endif%}"
-                href="/accounts/signup/"
-                >Sign Up</a
-              >
-              <a
-                class="dropdown-item {% if url_name == 'accounts_login' %}active{% endif %}"
-                href="/accounts/login/"
-                >Log In</a
-              >
-              {% endif %}
+                <ul class="navbar-nav mb-2">
+                    <li class="nav-item">
+                        <a
+						class="nav-link {% if url_name == 'home'%}active{%endif%}"
+						aria-current="page"
+						href="{% url 'home' %}"
+						>Home</a
+                        >
+                    </li>
+                    <li class="nav-item {% if url_name == 'roomcategory' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'rooms:roomcategory' %}">Rooms</a>
+                    </li>
+                    <li class="nav-item {% if url_name == 'add_booking' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'booking:add_booking' %}">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+						class="nav-link dropdown-toggle"
+						href="#"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+                        >
+							<i class="fa-solid fa-user"></i>
+							<span class="visually-hidden">User Menu</span>
+                        </a>
+                        {% if user.is_authenticated %}
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="{% url 'profile' pk=request.user.pk %}">Profile</a>
+                            <a class="dropdown-item" href=" {% url 'booking:booking_list' %}">Reservations</a>
+                            <a
+							class="dropdown-item {% if url_name == 'accounts_logout' %}active{%endif%}"
+							href="/accounts/logout/"
+							>Logout</a
+                            >
+                            {% else %}
+                            <a
+							class="dropdown-item {% if url_name == 'accounts_signup' %}active{%endif%}"
+							href="/accounts/signup/"
+							>Sign Up</a
+                            >
+                            <a
+							class="dropdown-item {% if url_name == 'accounts_login' %}active{% endif %}"
+							href="/accounts/login/"
+							>Log In</a
+                            >
+                        </div>
+                        {% endif %}
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  {% endwith %}
+        </div>
+    </nav>
+    {% endwith %}
 </header>
