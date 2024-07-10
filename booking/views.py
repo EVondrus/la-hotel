@@ -100,6 +100,10 @@ class BookingList(LoginRequiredMixin, ListView):
     context_object_name = 'bookings'
     model = Booking
 
+    def get_queryset(self):
+        """ Return bookings made by the currently logged-in user. """
+        return Booking.objects.filter(user=self.request.user)
+
 
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """ View for editing a booking """
