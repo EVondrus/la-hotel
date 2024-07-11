@@ -60,7 +60,7 @@ main {
 
 img.logo {
   width: 8rem;
-  height: auto;
+  height: 5rem;
 }
 
 a.nav-link {
@@ -135,7 +135,6 @@ a.btn-book {
 a.btn-red {
   background-color: var(--dark-red);
   color: var(--cloudy-white);
-
 }
 
 .btn-red {
@@ -278,7 +277,7 @@ a.btn-book:hover,
 }
 
 .category-card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adds a stronger shadow for pop-out effect */
 }
 
@@ -311,6 +310,7 @@ a.btn-book:hover,
 }
 
 /* Room Category Detail Page */
+
 .back-icon {
   font-size: 2rem;
   color: var(--dark-yellow);
@@ -321,7 +321,16 @@ a.btn-book:hover,
   cursor: pointer;
 }
 
+.room-detail-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: var(--smal-box-shadow);
+  margin-top: 3.3rem;
+}
+
 /* Profile Page */
+
 .profile-logo-img img {
   border-radius: 5px;
   box-shadow: var(--smal-box-shadow);
@@ -334,8 +343,8 @@ a.btn-book:hover,
 }
 
 .modal-content {
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 /* Footer */
@@ -349,6 +358,10 @@ footer {
   margin: 1rem;
   font-size: 1.4rem;
   color: var(--cloudy-white);
+}
+
+.social-icon:hover {
+  color: var(--gold);
 }
 
 .copyright {
@@ -368,7 +381,7 @@ footer {
   width: 90%;
   max-width: 600px;
   text-align: center;
-  padding: 0 15px; 
+  padding: 0 15px;
 }
 
 .custom-success {
@@ -381,7 +394,7 @@ footer {
 }
 
 .custom-error {
-  background-color: var(--dark-red); 
+  background-color: var(--dark-red);
   color: var(--cloudy-white);
   border: 1px solid #4f0409;
   padding: 10px;
