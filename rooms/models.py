@@ -3,11 +3,21 @@ from djmoney.models.fields import MoneyField
 from django_resized import ResizedImageField
 
 
-
 # Create your models here.
 class RoomCategory(models.Model):
     """
     Model representing a category of rooms in the hotel.
+
+    Attributes:
+        category (str): The category of the room (Standard, Deluxe, Suite).
+        beds (str): The size of the beds in the room (Double, Queen, King).
+        capacity (int): The maximum number of guests the room can accommodate.
+        price (MoneyField): The price of the room.
+        description (str): A description of the room.
+        image (ResizedImageField): An image of the room,
+        resized to 400x400 and saved in WEBP format.
+        image_alt (str): An alternative text for the room image,
+        used for accessibility and SEO.
     """
     ROOM_CATEGORIES = (
         ('STANDARD', 'Standard'),
@@ -56,6 +66,11 @@ class RoomCategory(models.Model):
 class Room(models.Model):
     """
     Model representing a room in the hotel.
+
+    Attributes:
+        room_number (str): The unique identifier for the room.
+        category (ForeignKey): The category the room belongs to.
+        available (bool): Whether the room is available for booking.
     """
     room_number = models.CharField(
         max_length=10, unique=True, blank=False, null=False)

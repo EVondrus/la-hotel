@@ -5,8 +5,6 @@ app_name = 'rooms'
 
 urlpatterns = [
     path('', RoomCategoryList.as_view(), name='roomcategory'),
-    path('<int:pk>/', RoomCategoryDetail.as_view(), name='roomcategory_detail'),
-    
+    path('<int:pk>/', RoomCategoryDetail.as_view(),
+         name='roomcategory_detail'),
 ]
-
-
