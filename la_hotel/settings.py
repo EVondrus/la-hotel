@@ -199,7 +199,7 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 
 STATIC_URL = 'static/'
 
-if 'LOCAL' in os.environ:
+if 'DEVELOPMENT' in os.environ:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 else:
     STATIC_ROOT = BASE_DIR / "static"
