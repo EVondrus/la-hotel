@@ -10,12 +10,14 @@ from django.dispatch import receiver
 class Profile(models.Model):
     """ Guest profile model """
     user = models.OneToOneField(
-        User, on_delete=models.CASCADE)
+        User, on_delete=models.CASCADE
+    )
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(
-        max_length=15, blank=False, unique=True)
-    address = models.TextField(max_length=250, blank=False)
+        max_length=15, blank=False, unique=True
+    )
+    address = models.CharField(max_length=250, blank=False)
     city = models.CharField(max_length=50, blank=False)
     country = models.CharField(max_length=50, blank=False)
     postal_code = models.CharField(max_length=10, blank=False)
