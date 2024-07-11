@@ -14,7 +14,17 @@ from rooms.models import Room, RoomCategory
 
 class Booking(models.Model):
     """
-    Define the booking information
+    Represents a booking made by a user for one or more rooms.
+
+    Methods:
+        __str__(): Returns a string representation of the booking.
+        calculate_total_price(check_in, check_out, room_category): 
+        Calculates the total price based on check-in, check-out dates,
+        and room category.
+
+        get_available_rooms(room_category, check_in, check_out): 
+        Retrieves rooms available for booking within a given category
+        and timeframe.
     """
     booking_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -29,19 +39,26 @@ class Booking(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Booking from {self.check_in} to {self.check_out} - Total: {self.total_price}"
+        return f"Booking from {self.check_in} to {self.check_out} \
+            - Total: {self.total_price}"
 
     class Meta:
         ordering = ['-check_in']
 
     @staticmethod
     def calculate_total_price(check_in, check_out, room_category):
+        """
+        Calculates the total price of a booking based on the check-in,
+        check-out dates, and room category price.
+
+        Returns:
+            float: Total price of the booking.
+        """
         if check_out <= check_in:
             raise ValueError("Check-out date must be after check-in date")
         total_nights = (check_out - check_in).days
         price_per_night = room_category.price.amount
         return price_per_night * total_nights
-
 
     @staticmethod
     def get_available_rooms(room_category, check_in, check_out):
@@ -63,7 +80,7 @@ class Booking(models.Model):
         return available_rooms
 
         def save(self, *args, **kwargs):
-        
+
             if self.check_out <= self.check_in:
                 raise ValueError("Check-out date must be after check-in date")
 
@@ -71,10 +88,11 @@ class Booking(models.Model):
             room_category = self.rooms.first().category
 
             # Calculate total price using the static method
-            self.total_price = self.calculate_total_price(self.check_in, self.check_out, room_category)
+            self.total_price = self.calculate_total_price(
+                self.check_in, self.check_out, room_category
+            )
 
             super().save(*args, **kwargs)
-
 
     @receiver(post_save, sender='booking.Booking')
     def update_room_availability_on_save(sender, instance, created, **kwargs):

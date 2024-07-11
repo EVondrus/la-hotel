@@ -2,14 +2,35 @@ from django import forms
 from django.forms import ModelForm
 from django.core.exceptions import ValidationError
 from django.utils import timezone
-from djmoney.forms.fields import MoneyField
 
 from .models import Booking
 from rooms.models import RoomCategory, Room
 
 
 class BookingForm(forms.ModelForm):
-    """Form for booking a room."""
+    """
+    Form for booking a room.
+
+    Fields:
+        check_in (DateField): Date picker for selecting check-in date.
+        check_out (DateField): Date picker for selecting check-out date.
+
+        room_category (ModelChoiceField):
+        Dropdown list of available room categories.
+
+        no_of_guests (IntegerField):
+        Input field for specifying number of guests.
+
+    Meta:
+        model (Booking): The model class to be used for this form.
+        fields (list): List of fields to include in the form.
+        labels (dict): Custom labels for form fields.
+
+    Methods:
+        clean(): Custom form validation method to validate dates,
+        number of guests, and calculate total price based on selected
+        dates and room category.
+    """
     check_in = forms.DateField(
         widget=forms.DateInput(attrs={
             'type': 'date', 'class': 'form-control'}),
@@ -28,7 +49,6 @@ class BookingForm(forms.ModelForm):
         min_value=1, required=True,
         widget=forms.NumberInput(attrs={'class': 'form-control'})
     )
-    
 
     class Meta:
         model = Booking
@@ -61,14 +81,16 @@ class BookingForm(forms.ModelForm):
         # Validate number of guests
         if no_of_guests < 1:
             raise ValidationError('Number of guests must be greater than 0')
-        
+
         if no_of_guests > cleaned_data['room_category'].capacity:
             raise ValidationError('Number of guests exceeds maximum allowed')
 
-        # Calculate total price if check-in, check-out, and room category are valid
+        # Calculate total price if check-in, check-out,
+        # and room category are valid
+        # price is stored in the RoomCategory model
         if check_in and check_out and room_category:
             total_nights = (check_out - check_in).days
-            price_per_night = room_category.price.amount  # price is stored in the RoomCategory model
+            price_per_night = room_category.price.amount
             total_price = price_per_night * total_nights
             cleaned_data['total_price'] = total_price
 

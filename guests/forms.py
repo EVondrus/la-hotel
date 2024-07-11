@@ -25,6 +25,15 @@ class CustomSignupForm(SignupForm):
         super().__init__(*args, **kwargs)
 
     def clean_username(self):
+        """
+        Validate that the username is unique.
+
+        Returns:
+            str: The cleaned username.
+
+        Raises:
+            ValidationError: If the username already exists.
+        """
         username = self.cleaned_data['username']
         if User.objects.filter(username=username).exists():
             raise ValidationError(
@@ -33,6 +42,15 @@ class CustomSignupForm(SignupForm):
         return username
 
     def clean_email(self):
+        """
+        Validate that the email is unique.
+
+        Returns:
+            str: The cleaned email.
+
+        Raises:
+            ValidationError: If the email already exists.
+        """
         email = self.cleaned_data['email']
         if User.objects.filter(email=email).exists():
             raise ValidationError(
@@ -41,6 +59,15 @@ class CustomSignupForm(SignupForm):
         return email
 
     def clean_phone_number(self):
+        """
+        Validate that the phone number is unique.
+
+        Returns:
+            str: The cleaned phone number.
+
+        Raises:
+            ValidationError: If the phone number already exists in the Profile model.
+        """
         phone_number = self.cleaned_data['phone_number']
         if Profile.objects.filter(phone_number=phone_number).exists():
             raise ValidationError(
@@ -49,7 +76,15 @@ class CustomSignupForm(SignupForm):
         return phone_number
 
     def save(self, request):
-        """ Save the user and profile"""
+        """
+        Save the user and create a related profile.
+
+        Args:
+            request: The HTTP request object.
+
+        Returns:
+            User: The created user instance.
+        """
         user = super(CustomSignupForm, self).save(request)
         Profile.objects.create(
             user=user,
@@ -66,7 +101,7 @@ class CustomSignupForm(SignupForm):
 
 
 class ProfileForm(forms.ModelForm):
-    """ Create a profile form """
+    """ Form for creating and updating user profiles."""
     class Meta:
         model = Profile
         fields = [

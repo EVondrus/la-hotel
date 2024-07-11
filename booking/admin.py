@@ -13,7 +13,7 @@ class RoomInline(admin.TabularInline):
     fields = ['room']
 
 
-class BookingAdmin(admin.ModelAdmin): 
+class BookingAdmin(admin.ModelAdmin):
     list_display = (
         'booking_id',
         'user',
