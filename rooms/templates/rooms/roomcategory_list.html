@@ -7,42 +7,39 @@
 {% block content %}
 
 <h1 class="text-center p-2 d-block my-4">Rooms</h1>
-<div
-  class="container d-flex flex-row flex-wrap justify-content-center room-categories mb-4"
->
-  {% for category in categories %}
-  <div class="card m-3 category-card" style="width: 18rem">
-    <!-- Check if the category image exists -->
-    {% if category.image %}
-    <img
-      src="{{ category.image.url }}"
-      class="card-img-top"
-      alt="{{ category.image_alt }}"
-    />
-    {% else %}
-    <!-- Display the default image if no image was uploaded -->
-    <img
-      src="{% static 'images/default-room.webp' %}"
-      class="card-img-top"
-      alt="Default Room Image"
-    />
-    {% endif %}
-    <div class="card-body">
-      <h2 class="card-title">{{ category.category|lower|capfirst }}</h2>
-      <p class="card-text">
-        {{ category.beds|lower|capfirst }} Bed, {{ category.capacity }} Guests
-        <br />
-        {{ category.price }}
-        <br />
-        {{ category.description|truncatewords:20|safe }}
-      </p>
 
-      <div class="mt-auto d-flex justify-content-center">
-        <a href="{% url 'rooms:roomcategory_detail' category.id %}" class="btn btn-gold"
-          >View Room</a>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
+<div class="container d-flex flex-row flex-wrap justify-content-center room-categories mb-4">
+	{% for category in categories %}
+	<div class="card m-3 category-card" style="width: 18rem">
+	<!-- Check if the category image exists -->
+	{% if category.image %}
+		<img
+			src="{{ category.image.url }}"
+			class="card-img-top"
+			alt="{{ category.image_alt }}"
+		/>
+	{% else %}
+		<!-- Display the default image if no image was uploaded -->
+		<img
+			src="{% static 'images/default-room.webp' %}"
+			class="card-img-top"
+			alt="Default Room Image"
+		/>
+	{% endif %}
+		<div class="card-body">
+			<h2 class="card-title">{{ category.category|lower|capfirst }}</h2>
+			<p class="card-text">
+			{{ category.beds|lower|capfirst }} Bed, {{ category.capacity }} Guests
+			<br />
+			{{ category.price }}
+			<br />
+			{{ category.description|truncatewords:20|safe }}
+			</p>
+			<div class="mt-auto d-flex justify-content-center">
+				<a href="{% url 'rooms:roomcategory_detail' category.id %}" class="btn btn-gold">View Room</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
 </div>
 {% endblock %}
