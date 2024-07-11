@@ -40,6 +40,13 @@ class AddBooking(LoginRequiredMixin, CreateView):
         check_out = form.cleaned_data['check_out']
         no_of_guests = form.cleaned_data['no_of_guests']
         room_category = form.cleaned_data['room_category']
+
+        if check_out <= check_in:
+            messages.error(
+            self.request, 'Check-out date must be after the check-in date. \
+                Please select valid dates.'
+        )
+            return self.form_invalid(form)
         
         # total_price calculation and room selection logic 
         # is defined in booking model
@@ -53,7 +60,8 @@ class AddBooking(LoginRequiredMixin, CreateView):
         if not available_rooms:
             messages.error(
                 self.request, 'This room is not available for the \
-                    selected dates.')
+                    selected dates.'
+        )
             return self.form_invalid(form)
 
         else: 
@@ -119,7 +127,9 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         check_out = form.cleaned_data['check_out']
 
         # check_in is a datetime.date object from form.cleaned_data
-        check_in_datetime = timezone.make_aware(datetime.combine(check_in, datetime.min.time()))
+        check_in_datetime = timezone.make_aware(
+            datetime.combine(check_in, datetime.min.time())
+        )
         # Calculate the deadline for editing (15:00 on the day before check-in)
         check_in_deadline = check_in_datetime.replace(
             hour=15, minute=0, second=0) - timedelta(days=1)
@@ -145,7 +155,7 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         
         # Update booking details and room assignment
         booking = form.save(commit=False)
-        old_room = booking.rooms.first() if booking.rooms.exists() else None  # Get the previously booked room, if any
+        old_room = booking.rooms.first() if booking.rooms.exists() else None 
 
         #adding the first available room
         first_available_room = available_rooms[0] if available_rooms else None
@@ -154,10 +164,10 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
         # Recalculate total price based on updated booking details
         total_nights = (check_out - check_in).days
-        price_per_night = room_category.price.amount  # Adjust if necessary
+        price_per_night = room_category.price.amount 
         total_price = price_per_night * total_nights
         booking.total_price = total_price
-        booking.save()  # Save the booking with the new room and total price
+        booking.save() 
 
         # Make the old room available for others
         if old_room:
@@ -193,7 +203,9 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         booking = self.get_object()
         success_url = 'home'
 
-        check_in_datetime = timezone.make_aware(datetime.combine(check_in, datetime.min.time()))
+        check_in_datetime = timezone.make_aware(
+            datetime.combine(check_in, datetime.min.time())
+        )
         # Calculate the deadline for editing (15:00 on the day before check-in)
         check_in_deadline = check_in_datetime.replace(
             hour=15, minute=0, second=0) - timedelta(days=1)
