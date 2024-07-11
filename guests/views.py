@@ -35,7 +35,7 @@ class CustomSignup(SignupView):
             HttpResponse: The response after form is validated.
         """
         messages.success(
-            self.request, 'Your account has been created. You can now log in.'
+            self.request, 'Your account has been created.'
         )
         return super().form_valid(form)
 
