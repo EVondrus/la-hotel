@@ -60,7 +60,7 @@ main {
 
 img.logo {
   width: 8rem;
-  height: 5rem;
+  height: auto;
 }
 
 a.nav-link {
