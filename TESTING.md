@@ -139,6 +139,7 @@ Checked with [JSHint](https://jshint.com/) to test for errors and potential prob
 
 ### Python
 All code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) and all clear, no errors found.
+ - **Note**: The Django settings file created during project initialization has not been formatted.
 ![PEP8 validation](./docs/testing-images/booking-model-linter.png)
 
 - To view all python testing click [here](./docs/testing-images).
