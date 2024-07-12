@@ -667,7 +667,9 @@ DEVELOPMENT = True
 
 ### Known Bugs
 
-- No known bugs.
+- 1 Bug found:
+  - There is an issue with the truncatewords function on the room category page, causing the button in the first card to move up slightly. Attempts to adjust the number of tokens and content haven't resolved the issue. The problem occurs when descriptions have varying token lengths; it works correctly when descriptions have uniform token counts.
+
 - If you discover any bugs in my project, please let me know so that I can promptly address them.
 
 [Back to the top](#la-hotel)
