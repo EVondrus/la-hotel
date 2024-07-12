@@ -202,7 +202,6 @@ a.btn-book:hover,
   float: none;
   border: var(--border);
 }
-/* Check if ok for screenreaders */
 
 .form-text {
   display: none;
@@ -245,7 +244,7 @@ a.btn-book:hover,
     246,
     245,
     241,
-    0.5
+    0.8
   ); /* Semi-transparent white background */
   color: #333;
   margin-top: 10px;
