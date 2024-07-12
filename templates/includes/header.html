@@ -46,8 +46,8 @@
                     <li class="nav-item {% if url_name == 'add_booking' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'booking:add_booking' %}">Book</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                    <li class="nav-item {% if url_name == 'about' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
