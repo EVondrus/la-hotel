@@ -42,13 +42,22 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ### User Stories
 
+#### Epics
+- The project was divided into various epics, which are large bodies of work encompassing potential features for the project.
+- Each epic was then broken down into smaller user stories, with each story providing specific value to a user.
+- User stories were created from the perspectives of both the hotel owner and the website users.
+
+#### User Stories
+- All user stories are added as issues on GitHub.
+- Each user story details the value it provides, the acceptance criteria required for completion, and the tasks needed to complete it.
+- You can find all User Stories in the [Github Project Board](https://github.com/users/EVondrus/projects/4)
 
 
 ### Project Goals
 
-- The main goal is to create an easily editable site to elevate the guest experience and simplify hotel operations.
-- Designed with a user-centric approach, the platform should cater the needs of site users, site owners, staff users, and admin users.
-- This project also demonstrates my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality, using Code Institute PostgreSQL database, and Cloudinairy Services.
+- The primary goal is to create an easily editable site that enhances the guest experience and simplifies hotel operations.
+- Designed with a user-centric approach, the platform should meet the needs of site users, site owners, staff, and administrators.
+- This project also showcases my proficiency in maintaining a database integrated with a website, providing full CRUD (Create, Read, - Update, and Delete) functionality using the Code Institute PostgreSQL database and Cloudinary services.
 
 [Back to the top](#la-hotel)
 
@@ -67,7 +76,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ![Color scheme](./docs/images/coolors.png)
 
-### Typography ! TBC !
+### Typography
 
 - For the fonts, I selected Roboto Slab for Landskrona Hotel heading and Open Sans for the rest of the text, both available through Google Fonts.
 - These choices were made with a keen focus on readability and accessibility, ensuring a welcoming experience for users with dyslexia and partial visual impairments.
@@ -122,7 +131,6 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
     - Postal Code
     - Phone No
     - Date of Birth
-    - Joined date
   - Ensure no typos by entering the password twice, with the site checking to confirm that the passwords match.
   - &#128100; Store their details for faster booking.
   - &#128100; Keep a record of their reservation history.
@@ -305,7 +313,8 @@ The navigation bar changes depending on user status and screen size:
 
 ### Future Features
 
-For this project there are plenty future features that I would like to implement.
+- For this project there are plenty future features that I would like to implement.
+- All remaining user stories at the project deadline are stored in the product backlog, pending implementation in the next development cycle. For this project, GitHub milestones serve as the backlog.
 
 - For the upcoming spring:
 
@@ -333,7 +342,7 @@ In this project, defensive design principles are implemented to enhance user exp
 
 ---
 
-## Database Design
+### Database Design
 
 This database uses a PostgreSQL database through Code Institute.
 <br>
@@ -342,9 +351,9 @@ This database uses a PostgreSQL database through Code Institute.
 
 ---
 
-## Agile Development Process
+### Agile Development Process
 
-### Overview of Agile Methodology
+#### Overview of Agile Methodology
 
 - The development of Landskrona Hotel is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. Although not strictly following traditional Agile practices like scheduled sprints or scrums, the development process is inspired by Agile methodologies.
 
@@ -415,7 +424,7 @@ For details please follow link to: [Issues list](https://github.com/EVondrus/la-
 
 #### Database Design
 
-- ![Lucidcharts](https://lucid.co/) was used to create Entity-Relationship Diagrams (ERDs) to design the database schema.
+- [Lucidcharts](https://lucid.co/) was used to create Entity-Relationship Diagrams (ERDs) to design the database schema.
 
 ### Responsive Design
 
@@ -653,11 +662,13 @@ DEVELOPMENT = True
 
 ### Solved Bugs
 
-
+- By leveraging GitHub projects, all bugs and their respective solutions were documented and added.
+- You can view the bug reports in the [Kanban board](https://github.com/users/EVondrus/projects/4/views/1).
 
 ### Known Bugs
 
-No known bugs
+- No known bugs.
+- If you discover any bugs in my project, please let me know so that I can promptly address them.
 
 [Back to the top](#la-hotel)
 
@@ -665,18 +676,58 @@ No known bugs
 
 ## Credits
 
+
+Throughout the development of the Landskrona Hotel, numerous resources have been employed to guarantee a robust, user-friendly, and engaging platform. Below is a compilation of essential documentation, blogs, tutorials, and guides that have been pivotal in shaping the features and functionality of Landskrona Hotel:
+
 ### Code
 
-[W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) - Providing HTML and JavaScript for the modal on the profile page for edit profiles
+- **Bootstrap**: 
+  - Widely utilized for styling and responsive design, ensuring the site's accessibility across various devices. - [Bootstrap documentation](https://getbootstrap.com/).
+- **Django**:
+  - Django's documentation has been essential for backend development, serving as the backbone of the platform - [Django documentation](https://docs.djangoproject.com/en/5.0/).
+- **MDN Server-Generic list and detail views**:
+  - [MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views) -  How to use Class based generic views.
+- **django-allauth**:
+  - Implemented for authentication processes; setup guidance was followed from both the official documentation and additional tutorials provided by Code Institute's PP4 blog walkthrough - [django-allauth](https://docs.allauth.org/en/latest/installation/quickstart.html)
+- **Sources of inspiration and guidance in general**:
+    - The Django Recipe Sharing Tutorial series by Dee Mc - [Django Recipe Sharing Tutorial series](https://www.youtube.com/@IonaFrisbee).
+    - [Django Tutorial](https://youtu.be/n-FTlQ7Djqc?si=Hfm94TiD4vbWolwj) by Net Ninja. An outdated source, however Net Ninja is great at explaining the basic and fundamentals of Django.
+- **W3 Schools**:
+  - [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) - Providing HTML and JavaScript for the modal on the profile page for editing profiles
+- **Code Institute**:
+  - The Django Blog walkthrough acted as a guidance through out this project on how to set up packages and settings.
+- **Darshan Dev**:
+  - [Django Hotel Management system](https://www.youtube.com/@darshandev1754) - Helped me with inspiration for the logic on how to build a project like this and to get started.
+
+- **Lucid Software**:
+  - [Diagramming in Lucidcharts](https://www.youtube.com/watch?v=xsg9BDiwiJE&t=25s) -  Provided a basic overview of ERDs and then gives step-by-step training on how to make an ER diagram with correct cardinality.
 
 ### Content
 
-[Pexels]()
+First of all, Thank you for the beautiful images provided by these artist!
+
+**Home page**:
+- The Hero image is taken by my self of the beautiful Landskrona Citadel in my hometown.
+
+**Room Images**:
+
+- Pexels
+  - [Max Vakhtbovycn](https://www.pexels.com/photo/bedroom-with-table-under-lamps-near-bed-and-curtains-6899445/)
+  - [Max Vakhtbovycn](https://www.pexels.com/photo/bedroom-interior-with-bed-near-pouf-6782577/)
+  - [Engin Akyurt](https://www.pexels.com/photo/photo-of-wine-bottle-and-food-on-table-1579253/)
+
+- **Pixabay**
+  - [u_woqvkflr9w](https://pixabay.com/sv/photos/sovrum-rum-design-interi%C3%B6r-byggnad-8242517/)
+
+- **Text Content:**
+  - Generated by ChatGPT
+
 
 ### Acknowledgments
 
-- The amazing Swedish Community channel on Slack for their enormous support and help.
-- An extra thanks to John Traas, Niclas Hugdahl!
-- My mentor Antonio Rodruigez for supporting and pointing me into right direction.
+- The incredible **Swedish Community** channel on Slack for their immense support and assistance.
+- Special thanks to **John Traas**, **Niclas Hugdahl**, and **Dee Mc** for their help and support when I encountered obstacles that I was unable to sort on my own.
+- My mentor, **Antonio Rodruigez**, for guiding and supporting me in the right direction.
+- My partner **Mladen Djurdjevic** for his unwavering support and for handling everything else while I focused on this project.
 
 [Back to the top](#la-hotel)
