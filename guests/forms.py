@@ -75,6 +75,33 @@ class CustomSignupForm(SignupForm):
                     Please use a different phone number.'))
         return phone_number
 
+    def clean(self):
+        """
+        Check that all required fields are filled out.
+
+        Raises:
+            ValidationError: If any required field is missing.
+        """
+        cleaned_data = super().clean()
+        
+        # List of required fields
+        required_fields = [
+            'first_name', 'last_name', 'phone_number', 
+            'address', 'city', 'country', 'postal_code', 
+            'date_of_birth'
+        ]
+        
+        missing_fields = []
+        for field in required_fields:
+            if field not in cleaned_data or not cleaned_data[field]:
+                missing_fields.append(field.capitalize())
+
+        if missing_fields:
+            error_message = _("The following fields are required: ") + ", ".join(missing_fields)
+            raise ValidationError(error_message)
+
+        return cleaned_data
+
     def save(self, request):
         """
         Save the user and create a related profile.
