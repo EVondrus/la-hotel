@@ -12,7 +12,7 @@ This site is fully responsive on all modern screen sizes, and it allows the site
 
 This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and it uses a PostgreSQL database through Code Institute.
 
-![Final project mockup screenshot from Am I Responsive]()
+![Final project mockup screenshot from Am I Responsive](./docs/images/amIresponsive.png)
 
 ---
 
@@ -36,8 +36,8 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 
 ### Initial Discussion
 
-- This project is something I wanted to create as I'm a passionate traveler which led me to use plenty of hotel booking sites and I've previously been working in the hotel buisness as well.
-- I wanted to create a website linked to a database, which allows users to log in, view hotel information, room details, and make room reservations.
+- This project is something I wanted to create as I'm a passionate traveler which led me to use plenty of hotel booking sites and made me wanted to create a simple and seamless hotel booking site.
+- I wanted to create a website linked to a database, which allows users to create a profile, log in, view hotel information, room details and make room reservations.
 - I wanted the administration to be able to add, edit and delete hotel information, room details and reservations.
 
 ### User Stories
@@ -65,18 +65,18 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 - A dark red has been used for all Delete buttons, to signify that this is a destructive action.
 - The gold yellow has been used for the hover state of the call-to-action buttons and social icons.
 
-![Color scheme]()
+![Color scheme](./docs/images/coolors.png)
 
 ### Typography ! TBC !
 
-- For the fonts, I selected Roboto Slab for headings and Open Sans for body text, both available through Google Fonts.
+- For the fonts, I selected Roboto Slab for Landskrona Hotel heading and Open Sans for the rest of the text, both available through Google Fonts.
 - These choices were made with a keen focus on readability and accessibility, ensuring a welcoming experience for users with dyslexia and partial visual impairments.
 - The elegance and readability of these fonts contribute to the app's overall sophistication and ease of use.
 - By utilizing the standard HTML font size of 16px, ensuring to not have any fonts smaller than 12px, to aid visually impaired users.
 - Also, the recommended smallest font size for accessible websites is 12px, so by keeping most of the font sizes at the HTML standard of (16px) or above, I ensured to be fully compliant with the [Penn State University Accessibility and Usability Guidelines](https://accessibility.psu.edu/fontsizehtml/).
 - Font sizes are also able to be zoomed to 200% without losing contrast or functionality, to comply with the [WCAG Guidelines on fonts](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html).
 
-![An example of the fonts used]()
+![An example of the fonts used](./docs/images/google-fonts.png)
 
 ### Imagery
 
@@ -86,12 +86,12 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 - All links have their underlines removed for stylistic purposes. The links in the navigation bar re-gain their underlines when they're active.
 - All interactable objects have hover and focus styles applied to make it clear to the user that those objects are interactable.
 - Icons from [Font Awesome](https://fontawesome.com/) have been used on the site to add meaning where relevant and suitable. These icons are accompanied by either visible text or descriptive aria-labels, ensuring inclusivity and accessibility.
-- Button and link colors have been used to convey meaning, mainly in the use of the color dark red to convey 'Delete' or 'Cancel' as dangerous actions.
+- Button colors have been used to convey meaning, mainly in the use of the color dark red to convey 'Delete' or 'Cancel' as dangerous actions.
 
 ### Wireframes
-
-- [Wireframes for desktop, mobile, and tablet for this project]().
-- [ER Diagram for this project]().
+- At the start of this project, a series of wireframes were created to outline the initial design concepts.
+- Please note that these wireframes represent the early stages of design and do not fully reflect the final implementation of the project.
+  - [Wireframes for desktop and mobile for this project](./docs/wireframes)
 
 [Back to the top](#la-hotel)
 
@@ -105,6 +105,8 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
 - Get a view of the hotel's ambiance with images and engaging text, providing visitors with a glimpse of the hotel's offerings.
 - Viewing the room types in a carousell - each option linking to a detailed room description page with the choice to make a room reservation.
 - View contact information and location.
+
+![Room carousel](./docs/images/room-carousel.png)
 
 #### User profile registration
 
@@ -125,7 +127,8 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - &#128100; Store their details for faster booking.
   - &#128100; Keep a record of their reservation history.
 
-![User registration]()
+![User registration](./docs/images/register-1.png)
+![User registration](./docs/images/register-2.png)
 
 #### Log in
 
@@ -138,6 +141,8 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
     - View, update and delete their profile details.
   - Browse their room reservations (if they have any).
     - View, update and cancel room reservations.
+  
+![Log in page](./docs/images/sign-in.png)
 
 #### User Profile Page
 
@@ -150,7 +155,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - Upon deletion of their profile/account a deletion page will be displayed asking
   if the user is sure to delete their profile/account.
 
-![User' profile page with edit and delete buttons]()
+![User' profile page with edit and delete buttons](./docs/images/profile-page.png)
 
 
 ### Room Category page
@@ -162,7 +167,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - Get an overview of what the different room categories offer, including a image, brief description of features and amenities, capacity and price.
   - Click on a room detail card to be redirected to the full room details pages.
 
-![Room Category page]()
+![Room Category page](./docs/images/roomcategory-page.png)
 
 
 ### Room Detail page
@@ -179,7 +184,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - **Booking Option:** Users have the option to proceed with booking the selected room by clicking the 'Book' button.
     - This action redirects them to a dedicated page designed for making reservations, where they can finalize their booking details.
 
-![Room Detail page with book button]()
+![Room Detail page with book button](./docs/images/roomdetail-page.png)
 
 #### &#128272; Create, Edit and Delete Room details
 
@@ -189,9 +194,6 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - Delete an existing category or room.
   - Include images, by uploading directly from the superuser's computer.
 
-![Admin functionality to create, update or room details]()
-
-#### &#128272; Create, Edit and Delete Hotel details
 
 - This feature allows the superuser to:
   - Add a new details to the About and Contact page.
@@ -199,7 +201,6 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - Delete an existing information.
   - Include images, by uploading directly from the superuser's computer.
 
-![Admin functionality to create, update or delete hotel details]()
 
 #### &#128272; Create, Edit and Delete Room reservations
 
@@ -208,9 +209,9 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - Edit an existing reservation.
   - Delete an existing reservation.
 
-  ![Admin functionality to create, update or delete room reservation]()
+  ![Admin panel](./docs/images/admin-panel.png)
 
-### Booking Page ! TBC !
+### Booking Page
 
 - This feature allows the user to:
   - Make reservation as a logged in user
@@ -221,7 +222,7 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
     - Number of guests.
     - Room category
 
-![Booking form]()
+![Booking form](./docs/images/booking-form.png)
 
 #### Reservation Confirmation
 
@@ -234,7 +235,20 @@ This site was built using HTML, CSS, Bootstrap, JavaScript, Python, Django, and 
   - The confirmation page contains full reservation details and booking id.
   - &#128100; The reservation will be added to the user's reservation page.
 
-  ![Successful Reservation]()
+  ![Successful Reservation](./docs/images/booking-success.png)
+
+  ### Reservation Page
+
+- This feature allows the user to:
+
+  - View their reservation details.
+  - Edit their reservation.
+    - Upon submitting the editing of the reservation form a success message will be displayed.
+  - Delete their reservation.
+    - Upon deletion of their reservation a deletion page will be displayed asking
+    if the user is sure to delete their profile/account.
+
+![Reservation page](./docs/images/reservation-page.png)
 
 ### Navigation bar
 
@@ -255,16 +269,17 @@ The navigation bar changes depending on user status and screen size:
 
 - Navigation bar
 
-![Overall navigation bar]()
-
 - Logged in
 
-![Logged in navigation dropdown]()
+![Logged in navigation dropdown](./docs/images/logged-in.png)
 
 - Logged out
 
+![Logged in navigation dropdown](./docs/images/logged-out.png)
 
-![Mobile navigation bar expanded]()
+- Mobile 
+
+![Mobile navigation bar expanded](./docs/images/mobile-nav.png)
 
 ### About Section
 
@@ -282,7 +297,7 @@ The navigation bar changes depending on user status and screen size:
   - View adress and location.
   - View phone number to contact the hotel in a quicker manner.
 
-![The Contact Us page]()
+![The Contact Us page](./docs/images/homepage-3.png)
 
 ### Footer
 - This feature allows the user to:
@@ -290,16 +305,40 @@ The navigation bar changes depending on user status and screen size:
 
 ### Future Features
 
-### Defensive Design ! TBC !
+For this project there are plenty future features that I would like to implement.
+
+- For the upcoming spring:
+
+  - A form to check room availability on room category and room detail page.
+  - Dashboard for the staff/receptionist to handle guests and reservations.
+  - Dashboard for the admin/manager to handle hotel, room categories and room details.
+  - Ability for the admin to add more images of the hotel and rooms.
+
+### Defensive Design
+
+In this project, defensive design principles are implemented to enhance user experience and system reliability. Informative feedback to users, ensuring clarity and guidance through success and error messages:
+
+- Success Messages:
+  - Upon successful form submissions or operations, users receive clear and affirmative messages confirming the completion of their actions. This helps maintain transparency and reassures users that their requests have been successfully processed.
+
+  ![Success message](./docs/images/update-booking-message.png)
+
+- Error Handling:
+  - When forms contain invalid data or edits cannot be applied due to constraints, users are promptly notified with confirmation page or error messages. These messages are designed to be specific and actionable, guiding users on how to correct issues and proceed with their tasks effectively.
+
+ ![Error message](./docs/images/booking-errors.png)
+ ![Error message](./docs/images/cancel-booking.png)
 
 [Back to the top](#la-hotel)
 
 ---
 
-## Database Design ! TBC !
+## Database Design
 
 This database uses a PostgreSQL database through Code Institute.
-[ER Diagram]()
+<br>
+
+- [ER Diagram for this project](./docs/images/erd.png).
 
 ---
 
@@ -307,19 +346,25 @@ This database uses a PostgreSQL database through Code Institute.
 
 ### Overview of Agile Methodology
 
-The development of Landskrona Hotel is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. Although not strictly following traditional Agile practices like scheduled sprints or scrums, the development process is inspired by Agile methodologies.
+- The development of Landskrona Hotel is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. Although not strictly following traditional Agile practices like scheduled sprints or scrums, the development process is inspired by Agile methodologies.
 
-Rather than using sprints with defined start and end dates, the project focuses on a milestones of the overall deadline. This straightforward approach prioritizes the development of core functionalities first before expanding to more complex features.
+- Rather than using sprints with defined start and end dates, the project focuses on a milestones of the overall deadline. This straightforward approach prioritizes the development of core functionalities first before expanding to more complex features.
 
-When encountering bugs or issues, they are recorded as bug issues and added to the backlog. This allows continuous progress in other areas while periodically revisiting and prioritizing the backlog based on severity and impact. This method ensures that development momentum is maintained while systematically addressing and resolving issues.
+- When encountering bugs or issues, they are recorded as bug issues and added to the backlog. This allows continuous progress in other areas while periodically revisiting and prioritizing the backlog based on severity and impact. This method ensures that development momentum is maintained while systematically addressing and resolving issues.
 
-User feedback is actively sought and analyzed to identify areas for improvement, ensuring that the product continuously evolves to meet the needs and expectations of its users effectively.
+- User feedback is actively sought and analyzed to identify areas for improvement, ensuring that the product continuously evolves to meet the needs and expectations of its users effectively.
 
 For details please follow link to: [Github Project board](https://github.com/users/EVondrus/projects/4)
 
 ### MoSCoW Prioritization
 
-Labels were added to user stories to assist with prioritization of tasks. The MoSCoW system involves adding labels for MUST HAVE, SHOULD HAVE, COULD HAVE and WON'T HAVE. This method assists in ensuring that essential features are completed first, optimizing resource allocation and meeting critical deadlines.
+- Labels were added to user stories to assist with prioritization of tasks. 
+- The MoSCoW system involves adding labels for:
+  - MUST HAVE
+  - SHOULD HAVE
+  - COULD HAVE
+  - WON'T HAVE
+- This method assists in ensuring that essential features are completed first, optimizing resource allocation and meeting critical deadlines.
 
 For details please follow link to: [Issues list](https://github.com/EVondrus/la-hotel/issues)
 
@@ -350,69 +395,69 @@ For details please follow link to: [Issues list](https://github.com/EVondrus/la-
 
 #### GitPod & Visual Studio Code
 
-[Visual Studio Code](https://code.visualstudio.com/) was used as a local IDE workspace to build the site.
+- [Visual Studio Code](https://code.visualstudio.com/) was used as a local IDE workspace to build the site.
 
 ### Version Control
 
 #### Git
 
-[Git](https://git-scm.com/) Git was used for version control. The Gitpod and VS Code terminals were utilized to add, commit to Git and pushed to GitHub.
+- [Git](https://git-scm.com/) Git was used for version control. The Gitpod and VS Code terminals were utilized to add, commit to Git and pushed to GitHub.
 
 #### GitHub
 
-[GitHub](https://github.com/) is used to store the code for this project.
+- [GitHub](https://github.com/) is used to store the code for this project.
 
 ### Wireframing
 
 #### Balsamiq
 
-[Balsamiq](https://balsamiq.com/) was used for creating wireframes to plan the layout and structure of the site
+- [Balsamiq](https://balsamiq.com/) was used for creating wireframes to plan the layout and structure of the site
 
 #### Database Design
 
-![Lucidcharts](https://lucid.co/) was used to create Entity-Relationship Diagrams (ERDs) to design the database schema.
+- ![Lucidcharts](https://lucid.co/) was used to create Entity-Relationship Diagrams (ERDs) to design the database schema.
 
 ### Responsive Design
 
 #### Am I Responsive Design
 
-[Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the site's responsive design and create the final site image.
+- [Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the site's responsive design and create the final site image.
 
 #### Responsinator
 
-[Responsinator](http://www.responsinator.com/) was used to improve the site's responsive design on a variety of devices.
+- [Responsinator](http://www.responsinator.com/) was used to improve the site's responsive design on a variety of devices.
 
 ### Documentation
 
 #### Shields.io
 
-[Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
+- [Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
 
 ### Site Design
 
 #### Font Awesome
 
-[Font Awesome](https://fontawesome.com/) was used on all pages to add icons.
+- [Font Awesome](https://fontawesome.com/) was used on all pages to add icons.
 
 #### Google Fonts
 
-[Google Fonts](https://fonts.google.com/) was used to select the fonts for the site.
+- [Google Fonts](https://fonts.google.com/) was used to select the fonts for the site.
 
 #### Favicon.io
 
-[favicon.io](https://favicon.io/) was used to create the site favicon.
+- [favicon.io](https://favicon.io/) was used to create the site favicon.
 
 #### Canva
 
-[Canva](https://www.canva.com/create/logos/) was used to create the site logo.
+- [Canva](https://www.canva.com/create/logos/) was used to create the site logo.
 
 ### Tiny PNG
 
-[TinyPNG](https://tinypng.com/) was used to compress images.
+- [TinyPNG](https://tinypng.com/) was used to compress images.
 
 ### Coolors
 
-[Coolors](https://coolors.co/) was used to create the site color palette.
+- [Coolors](https://coolors.co/) was used to create the site color palette.
 
 
 ### Packages 
@@ -435,25 +480,25 @@ For details please follow link to: [Issues list](https://github.com/EVondrus/la-
 
 #### Heroku
 
-[Heroku](https://www.heroku.com) was used to deploy the live site.
+- [Heroku](https://www.heroku.com) was used to deploy the live site.
 
 ### Frameworks, Libraries, and Others
 
 #### Google DevTools
 
-[Google DevTools](https://developer.chrome.com/docs/devtools/)was used to identify the code corresponding to specific features.
+- [Google DevTools](https://developer.chrome.com/docs/devtools/)was used to identify the code corresponding to specific features.
 
 #### Lighthouse
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure the code was performant, followed best practices, and adhered to SEO and accessibility guidelines.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure the code was performant, followed best practices, and adhered to SEO and accessibility guidelines.
 
 #### Bootstrap
 
-[Bootstrap](https://getbootstrap.com/) was used to create a beautiful, responsive website.
+- [Bootstrap](https://getbootstrap.com/) was used to create a beautiful, responsive website.
 
 #### pip
 
-[pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
+- [pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
 
 [Back to the top](#la-hotel)
 
@@ -518,7 +563,8 @@ Important points for before deployment:
         - DATABASE_URL 
         - EMAIL_HOST_PASS
         - EMAIL_HOST_USER
-        - SECRET_KEY 
+        - SECRET_KEY
+        - HOST
  
     - Config Vars for production:
         - CLOUDINARY_URL
@@ -526,6 +572,7 @@ Important points for before deployment:
         - EMAIL_HOST_PASS
         - EMAIL_HOST_USER
         - SECRET_KEY 
+        - HOST
 
 **=> Go back to your code**
 
@@ -600,9 +647,9 @@ DEVELOPMENT = True
 
 </details>
 
-### Testing ! TBC !
+### Testing
 
-[Click here to view the full testing steps](), which were completed on Google Chrome, Safari and...., and screenshots of testing.
+[Click here to view the full testing steps](/TESTING.md), which were completed on Google Chrome, Firefox, Abdroid, iOS and MUIU operative systems
 
 ### Solved Bugs
 
