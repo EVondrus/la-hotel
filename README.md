@@ -293,9 +293,9 @@ The navigation bar changes depending on user status and screen size:
 
 - This feature allows the user to:
 
-  - Read about the hotel, it's history and owners.
+  - Read about the hotel and it's offers.
 
-![The About page]()
+![The About page](./docs/images/about-page.png)
 
 ### Contact section
 
